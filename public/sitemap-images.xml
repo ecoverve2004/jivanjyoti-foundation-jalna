@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Homepage Images -->
+  <url>
+    <loc>https://jivanjyoti-foundation-2024.web.app/</loc>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/bg.jpg</image:loc>
+      <image:title>JivanJyoti Foundation Hero Background</image:title>
+      <image:caption>Environmental conservation and tree plantation NGO</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/nature.jpg</image:loc>
+      <image:title>Nature Conservation</image:title>
+      <image:caption>Protecting natural ecosystems</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Team Images -->
+  <url>
+    <loc>https://jivanjyoti-foundation-2024.web.app/team.html</loc>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/anurag.jpg</image:loc>
+      <image:title>Anurag - Team Member</image:title>
+      <image:caption>JivanJyoti Foundation team member</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/govind.jpg</image:loc>
+      <image:title>Govind - Team Member</image:title>
+      <image:caption>JivanJyoti Foundation team member</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/kunal.jpg</image:loc>
+      <image:title>Kunal - Team Member</image:title>
+      <image:caption>JivanJyoti Foundation team member</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/kishor.jpg</image:loc>
+      <image:title>Kishor - Team Member</image:title>
+      <image:caption>JivanJyoti Foundation team member</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/Baliram.jpg</image:loc>
+      <image:title>Baliram - Team Member</image:title>
+      <image:caption>JivanJyoti Foundation team member</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/Rajendra.jpg</image:loc>
+      <image:title>Rajendra - Team Member</image:title>
+      <image:caption>JivanJyoti Foundation team member</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/pyarelal.jpeg</image:loc>
+      <image:title>Pyarelal - Team Member</image:title>
+      <image:caption>JivanJyoti Foundation team member</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/pushpa%20.jpg</image:loc>
+      <image:title>Pushpa - Team Member</image:title>
+      <image:caption>JivanJyoti Foundation team member</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Work Gallery Images -->
+  <url>
+    <loc>https://jivanjyoti-foundation-2024.web.app/gallery.html</loc>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/works/1.jpg</image:loc>
+      <image:title>JivanJyoti Foundation Work 1</image:title>
+      <image:caption>Environmental conservation work</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/works/2.jpg</image:loc>
+      <image:title>JivanJyoti Foundation Work 2</image:title>
+      <image:caption>Tree plantation activities</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/works/3.jpg</image:loc>
+      <image:title>JivanJyoti Foundation Work 3</image:title>
+      <image:caption>Community engagement programs</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/works/4.jpg</image:loc>
+      <image:title>JivanJyoti Foundation Work 4</image:title>
+      <image:caption>Environmental awareness campaigns</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/works/5.jpg</image:loc>
+      <image:title>JivanJyoti Foundation Work 5</image:title>
+      <image:caption>Forest conservation efforts</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/works/6.jpg</image:loc>
+      <image:title>JivanJyoti Foundation Work 6</image:title>
+      <image:caption>Sustainable development projects</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/works/8.jpg</image:loc>
+      <image:title>JivanJyoti Foundation Work 8</image:title>
+      <image:caption>Wildlife protection initiatives</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/works/9.jpg</image:loc>
+      <image:title>JivanJyoti Foundation Work 9</image:title>
+      <image:caption>Green technology adoption</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/works/11.jpg</image:loc>
+      <image:title>JivanJyoti Foundation Work 11</image:title>
+      <image:caption>Environmental education programs</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/works/12.jpg</image:loc>
+      <image:title>JivanJyoti Foundation Work 12</image:title>
+      <image:caption>Climate change mitigation efforts</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/works/13.jpg</image:loc>
+      <image:title>JivanJyoti Foundation Work 13</image:title>
+      <image:caption>Biodiversity conservation projects</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/works/15.jpg</image:loc>
+      <image:title>JivanJyoti Foundation Work 15</image:title>
+      <image:caption>Ecosystem restoration work</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/works/17.jpg</image:loc>
+      <image:title>JivanJyoti Foundation Work 17</image:title>
+      <image:caption>Sustainable agriculture promotion</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/works/18.jpg</image:loc>
+      <image:title>JivanJyoti Foundation Work 18</image:title>
+      <image:caption>Water conservation initiatives</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Tree Plantation Images -->
+  <url>
+    <loc>https://jivanjyoti-foundation-2024.web.app/tree-plantation.html</loc>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/plantation.jpg</image:loc>
+      <image:title>Tree Plantation Program</image:title>
+      <image:caption>Large scale tree plantation initiatives</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/tree.jpeg</image:loc>
+      <image:title>Tree Conservation</image:title>
+      <image:caption>Protecting existing trees and forests</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/plant.jpeg</image:loc>
+      <image:title>Plant Nursery</image:title>
+      <image:caption>Growing saplings for plantation</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/plantation/apptitude2.jpg</image:loc>
+      <image:title>Plantation Training</image:title>
+      <image:caption>Training volunteers for tree plantation</image:caption>
+    </image:image>
+  </url>
+
+  <!-- School Work Images -->
+  <url>
+    <loc>https://jivanjyoti-foundation-2024.web.app/programs.html</loc>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/school%20work/school1.jpg</image:loc>
+      <image:title>School Environmental Program</image:title>
+      <image:caption>Environmental education in schools</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/school%20work/School1_cleanup.jpg</image:loc>
+      <image:title>School Cleanup Drive</image:title>
+      <image:caption>Students participating in cleanup activities</image:caption>
+    </image:image>
+  </url>
+
+</urlset>

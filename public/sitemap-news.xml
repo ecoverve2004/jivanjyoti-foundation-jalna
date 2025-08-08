@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+
+  <!-- Latest News Articles -->
+  <url>
+    <loc>https://jivanjyoti-foundation-2024.web.app/news.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>JivanJyoti Foundation News</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-04</news:publication_date>
+      <news:title>Latest Environmental Conservation Updates</news:title>
+      <news:keywords>environment, conservation, tree plantation, climate change, sustainability</news:keywords>
+    </news:news>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Comprehensive News -->
+  <url>
+    <loc>https://jivanjyoti-foundation-2024.web.app/news-comprehensive.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>JivanJyoti Foundation</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-04</news:publication_date>
+      <news:title>Comprehensive Environmental News and Updates</news:title>
+      <news:keywords>environmental news, forest protection, biodiversity, green initiatives, NGO updates</news:keywords>
+    </news:news>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Articles -->
+  <url>
+    <loc>https://jivanjyoti-foundation-2024.web.app/blog.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>JivanJyoti Foundation Blog</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-04</news:publication_date>
+      <news:title>Environmental Conservation Blog and Articles</news:title>
+      <news:keywords>environmental blog, conservation articles, tree plantation tips, sustainability guides</news:keywords>
+    </news:news>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

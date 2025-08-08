@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Main Sitemap -->
+  <sitemap>
+    <loc>https://jivanjyoti-foundation-2024.web.app/sitemap.xml</loc>
+    <lastmod>2025-01-04T12:00:00+00:00</lastmod>
+  </sitemap>
+
+  <!-- Images Sitemap -->
+  <sitemap>
+    <loc>https://jivanjyoti-foundation-2024.web.app/sitemap-images.xml</loc>
+    <lastmod>2025-01-04T12:00:00+00:00</lastmod>
+  </sitemap>
+
+  <!-- News Sitemap -->
+  <sitemap>
+    <loc>https://jivanjyoti-foundation-2024.web.app/sitemap-news.xml</loc>
+    <lastmod>2025-01-04T12:00:00+00:00</lastmod>
+  </sitemap>
+
+</sitemapindex>

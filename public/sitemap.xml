@@ -1,112 +1,180 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  
+  <!-- Homepage - Highest Priority -->
   <url>
-    <loc>https://jivanjyoti-foundation-jalna.netlify.app/</loc>
+    <loc>https://jivanjyoti-foundation-2024.web.app/</loc>
     <lastmod>2025-01-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/bg.jpg</image:loc>
+      <image:title>JivanJyoti Foundation - Environmental Conservation</image:title>
+      <image:caption>Protecting forests and fighting climate change</image:caption>
+    </image:image>
   </url>
+
+  <!-- About Page - High Priority -->
   <url>
-    <loc>https://jivanjyoti-foundation-jalna.netlify.app/about.html</loc>
-    <lastmod>2025-01-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://jivanjyoti-foundation-jalna.netlify.app/blog.html</loc>
-    <lastmod>2025-01-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://jivanjyoti-foundation-jalna.netlify.app/contact.html</loc>
-    <lastmod>2025-01-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://jivanjyoti-foundation-jalna.netlify.app/donate.html</loc>
+    <loc>https://jivanjyoti-foundation-2024.web.app/about.html</loc>
     <lastmod>2025-01-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/nature.jpg</image:loc>
+      <image:title>About JivanJyoti Foundation</image:title>
+    </image:image>
   </url>
+
+  <!-- Donate Page - Very High Priority -->
   <url>
-    <loc>https://jivanjyoti-foundation-jalna.netlify.app/gallery.html</loc>
+    <loc>https://jivanjyoti-foundation-2024.web.app/donate.html</loc>
     <lastmod>2025-01-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.95</priority>
   </url>
+
+  <!-- Tree Plantation - Core Service -->
   <url>
-    <loc>https://jivanjyoti-foundation-jalna.netlify.app/login.html</loc>
+    <loc>https://jivanjyoti-foundation-2024.web.app/tree-plantation.html</loc>
     <lastmod>2025-01-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/plantation.jpg</image:loc>
+      <image:title>Tree Plantation Programs</image:title>
+    </image:image>
   </url>
+
+  <!-- Team Page -->
   <url>
-    <loc>https://jivanjyoti-foundation-jalna.netlify.app/news.html</loc>
+    <loc>https://jivanjyoti-foundation-2024.web.app/team.html</loc>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://jivanjyoti-foundation-2024.web.app/contact.html</loc>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Programs Page -->
+  <url>
+    <loc>https://jivanjyoti-foundation-2024.web.app/programs.html</loc>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Projects Page -->
+  <url>
+    <loc>https://jivanjyoti-foundation-2024.web.app/project.html</loc>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Project Details -->
+  <url>
+    <loc>https://jivanjyoti-foundation-2024.web.app/project-details.html</loc>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Volunteer Page -->
+  <url>
+    <loc>https://jivanjyoti-foundation-2024.web.app/volunteer.html</loc>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Gallery Page -->
+  <url>
+    <loc>https://jivanjyoti-foundation-2024.web.app/gallery.html</loc>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://jivanjyoti-foundation-2024.web.app/images/works/1.jpg</image:loc>
+      <image:title>JivanJyoti Foundation Work Gallery</image:title>
+    </image:image>
+  </url>
+
+  <!-- Blog/News Pages -->
+  <url>
+    <loc>https://jivanjyoti-foundation-2024.web.app/blog.html</loc>
     <lastmod>2025-01-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://jivanjyoti-foundation-jalna.netlify.app/news-comprehensive.html</loc>
+    <loc>https://jivanjyoti-foundation-2024.web.app/news.html</loc>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://jivanjyoti-foundation-2024.web.app/news-comprehensive.html</loc>
     <lastmod>2025-01-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Login Page -->
   <url>
-    <loc>https://jivanjyoti-foundation-jalna.netlify.app/privacy.html</loc>
-    <lastmod>2025-01-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://jivanjyoti-foundation-jalna.netlify.app/programs.html</loc>
-    <lastmod>2025-01-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://jivanjyoti-foundation-jalna.netlify.app/project.html</loc>
-    <lastmod>2025-01-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://jivanjyoti-foundation-jalna.netlify.app/project-details.html</loc>
-    <lastmod>2025-01-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://jivanjyoti-foundation-jalna.netlify.app/team.html</loc>
-    <lastmod>2025-01-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://jivanjyoti-foundation-jalna.netlify.app/terms.html</loc>
-    <lastmod>2025-01-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://jivanjyoti-foundation-jalna.netlify.app/tree-plantation.html</loc>
-    <lastmod>2025-01-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://jivanjyoti-foundation-jalna.netlify.app/volunteer.html</loc>
-    <lastmod>2025-01-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://jivanjyoti-foundation-jalna.netlify.app/sitemap.html</loc>
+    <loc>https://jivanjyoti-foundation-2024.web.app/login.html</loc>
     <lastmod>2025-01-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://jivanjyoti-foundation-2024.web.app/privacy.html</loc>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://jivanjyoti-foundation-2024.web.app/terms.html</loc>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- Sitemap HTML Page -->
+  <url>
+    <loc>https://jivanjyoti-foundation-2024.web.app/sitemap.html</loc>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Test Pages (Lower Priority) -->
+  <url>
+    <loc>https://jivanjyoti-foundation-2024.web.app/nav-test.html</loc>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+  </url>
+
+  <url>
+    <loc>https://jivanjyoti-foundation-2024.web.app/test-auth.html</loc>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+  </url>
+
 </urlset>

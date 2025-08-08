@@ -1,24 +1,79 @@
+# Robots.txt for JivanJyoti Foundation
+# https://jivanjyoti-foundation-2024.web.app
+
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://jivanjyoti-foundation-website.netlify.app/sitemap.xml
-
-# Disallow admin areas
-Disallow: /admin/
-Disallow: /config/
-Disallow: /node_modules/
-Disallow: /.git/
-Disallow: /testing/
-
-# Allow important pages
+# Important pages for crawling
 Allow: /index.html
 Allow: /about.html
-Allow: /team.html
-Allow: /programs.html
-Allow: /tree-plantation.html
-Allow: /gallery.html
-Allow: /news-comprehensive.html
 Allow: /contact.html
 Allow: /donate.html
+Allow: /tree-plantation.html
+Allow: /team.html
+Allow: /programs.html
+Allow: /project.html
 Allow: /volunteer.html
+Allow: /gallery.html
+Allow: /news.html
+Allow: /blog.html
+
+# Allow images and assets
+Allow: /images/
+Allow: /assets/
+
+# Disallow test and admin pages
+Disallow: /test-auth.html
+Disallow: /nav-test.html
+Disallow: /login.html
+
+# Disallow temporary files
+Disallow: /*.tmp
+Disallow: /*.temp
+Disallow: /temp/
+Disallow: /cache/
+
+# Crawl delay (be nice to servers)
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://jivanjyoti-foundation-2024.web.app/sitemap.xml
+Sitemap: https://jivanjyoti-foundation-2024.web.app/sitemap-index.xml
+Sitemap: https://jivanjyoti-foundation-2024.web.app/sitemap-images.xml
+Sitemap: https://jivanjyoti-foundation-2024.web.app/sitemap-news.xml
+
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# Social media bots
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
