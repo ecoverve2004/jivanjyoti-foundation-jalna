@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="yuB84mu_L05PDvJ5M36dWrDtpUPWU6kCI5Nd-nI4A4M" />
+    <title>Authentication Test - JivanJyoti Foundation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-8 text-center">Authentication System Test</h1>
+        
+        <!-- Authentication Status -->
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <h2 class="text-2xl font-bold mb-4">Authentication Status</h2>
+            <div id="authStatus" class="p-4 rounded-lg bg-gray-50">
+                <p>Loading authentication status...</p>
+            </div>
+            <button id="refreshStatus" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                <i class="fas fa-refresh mr-2"></i>Refresh Status
+            </button>
+        </div>
+
+        <!-- Quick Login Test -->
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <h2 class="text-2xl font-bold mb-4">Quick Login Test</h2>
+            <p class="mb-4 text-gray-600">Test login functionality without going to the login page:</p>
+            
+            <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                    <h3 class="font-bold mb-2">Test Registration</h3>
+                    <input type="email" id="testEmail" placeholder="test@example.com" class="w-full p-2 border rounded mb-2">
+                    <input type="password" id="testPassword" placeholder="password123" class="w-full p-2 border rounded mb-2">
+                    <button id="testRegister" class="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600">
+                        Register Test User
+                    </button>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold mb-2">Test Login</h3>
+                    <input type="email" id="loginTestEmail" placeholder="test@example.com" class="w-full p-2 border rounded mb-2">
+                    <input type="password" id="loginTestPassword" placeholder="password123" class="w-full p-2 border rounded mb-2">
+                    <button id="testLogin" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">
+                        Login Test User
+                    </button>
+                </div>
+            </div>
+            
+            <button id="testLogout" class="mt-4 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 disabled:opacity-50" disabled>
+                <i class="fas fa-sign-out-alt mr-2"></i>Logout
+            </button>
+        </div>
+
+        <!-- Backend Configuration -->
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <h2 class="text-2xl font-bold mb-4">Backend Configuration</h2>
+            <div id="backendConfig" class="space-y-2">
+                <p>Loading configuration...</p>
+            </div>
+            <div class="mt-4">
+                <label class="flex items-center">
+                    <input type="checkbox" id="toggleBackend" class="mr-2">
+                    <span>Switch to PHP Backend (currently Firebase)</span>
+                </label>
+                <button id="applyConfig" class="mt-2 bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
+                    Apply Configuration
+                </button>
+            </div>
+        </div>
+
+        <!-- Navigation Test -->
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <h2 class="text-2xl font-bold mb-4">Navigation Test</h2>
+            <p class="mb-4 text-gray-600">Test how navigation changes based on login status:</p>
+            
+            <!-- Sample Navigation -->
+            <nav class="bg-green-800 text-white p-4 rounded">
+                <ul class="flex space-x-4">
+                    <li><a href="index.html" class="hover:text-green-300">Home</a></li>
+                    <li><a href="about.html" class="hover:text-green-300">About</a></li>
+                    <li><a href="contact.html" class="hover:text-green-300">Contact</a></li>
+                    <li><a href="login.html" class="hover:text-green-300">Login</a></li>
+                </ul>
+            </nav>
+            
+            <p class="mt-4 text-sm text-gray-600">
+                When logged in, the "Login" link should change to show user menu with logout option.
+            </p>
+        </div>
+
+        <!-- Test Results -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold mb-4">Test Results</h2>
+            <div id="testResults" class="space-y-2 font-mono text-sm">
+                <p>Run tests to see results...</p>
+            </div>
+            <button id="clearResults" class="mt-4 bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">
+                Clear Results
+            </button>
+        </div>
+    </div>
+
+    <!-- Authentication Service -->
+    <script src="auth-service.js" defer type="module"></script>
+    
+    <script type="module">
+        let testResults = [];
+        
+        function addTestResult(message, type = 'info') {
+            const timestamp = new Date().toLocaleTimeString();
+            testResults.push(`[${timestamp}] ${type.toUpperCase()}: ${message}`);
+            updateTestResults();
+        }
+        
+        function updateTestResults() {
+            const resultsDiv = document.getElementById('testResults');
+            resultsDiv.innerHTML = testResults.map(result => {
+                const color = result.includes('ERROR') ? 'text-red-600' : 
+                            result.includes('SUCCESS') ? 'text-green-600' : 
+                            result.includes('WARNING') ? 'text-yellow-600' : 'text-gray-600';
+                return `<p class="${color}">${result}</p>`;
+            }).join('');
+        }
+        
+        function updateAuthStatus() {
+            const statusDiv = document.getElementById('authStatus');
+            const logoutBtn = document.getElementById('testLogout');
+            
+            if (window.AuthService && window.AuthService.isLoggedIn) {
+                const user = window.AuthService.getCurrentUser();
+                statusDiv.innerHTML = `
+                    <div class="text-green-600">
+                        <i class="fas fa-check-circle mr-2"></i>
+                        <strong>Logged In</strong>
+                        <div class="mt-2 text-sm">
+                            <p><strong>Email:</strong> ${user.email}</p>
+                            <p><strong>User ID:</strong> ${user.uid}</p>
+                        </div>
+                    </div>
+                `;
+                logoutBtn.disabled = false;
+            } else {
+                statusDiv.innerHTML = `
+                    <div class="text-red-600">
+                        <i class="fas fa-times-circle mr-2"></i>
+                        <strong>Not Logged In</strong>
+                    </div>
+                `;
+                logoutBtn.disabled = true;
+            }
+        }
+        
+        function updateBackendConfig() {
+            const configDiv = document.getElementById('backendConfig');
+            const checkbox = document.getElementById('toggleBackend');
+            
+            // This would read from auth-service.js configuration
+            const usingFirebase = true; // Default assumption
+            
+            configDiv.innerHTML = `
+                <p><strong>Current Backend:</strong> ${usingFirebase ? 'Firebase Authentication' : 'PHP Backend'}</p>
+                <p><strong>PHP URL:</strong> auth.php</p>
+                <p><strong>Firebase Project:</strong> jivanjyoti-foundation</p>
+                <p class="text-sm text-gray-600 mt-2">
+                    To change backend, modify USE_FIREBASE_AUTH in auth-service.js
+                </p>
+            `;
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            addTestResult('Page loaded, initializing tests...', 'info');
+            
+            // Wait for AuthService to be available
+            const checkAuthService = setInterval(() => {
+                if (window.AuthService) {
+                    clearInterval(checkAuthService);
+                    addTestResult('AuthService loaded successfully', 'success');
+                    updateAuthStatus();
+                    updateBackendConfig();
+                    
+                    // Set up periodic status updates
+                    setInterval(updateAuthStatus, 2000);
+                } else {
+                    addTestResult('Waiting for AuthService...', 'warning');
+                }
+            }, 500);
+            
+            // Event listeners
+            document.getElementById('refreshStatus').addEventListener('click', () => {
+                updateAuthStatus();
+                addTestResult('Status refreshed', 'info');
+            });
+            
+            document.getElementById('testRegister').addEventListener('click', async () => {
+                const email = document.getElementById('testEmail').value;
+                const password = document.getElementById('testPassword').value;
+                
+                if (!email || !password) {
+                    addTestResult('Please enter email and password for registration test', 'error');
+                    return;
+                }
+                
+                addTestResult(`Attempting to register user: ${email}`, 'info');
+                
+                try {
+                    // This would need to be implemented in AuthService
+                    addTestResult('Registration test not fully implemented yet', 'warning');
+                } catch (error) {
+                    addTestResult(`Registration failed: ${error.message}`, 'error');
+                }
+            });
+            
+            document.getElementById('testLogin').addEventListener('click', async () => {
+                const email = document.getElementById('loginTestEmail').value;
+                const password = document.getElementById('loginTestPassword').value;
+                
+                if (!email || !password) {
+                    addTestResult('Please enter email and password for login test', 'error');
+                    return;
+                }
+                
+                addTestResult(`Attempting to login user: ${email}`, 'info');
+                
+                try {
+                    // This would need to be implemented in AuthService
+                    addTestResult('Login test not fully implemented yet', 'warning');
+                } catch (error) {
+                    addTestResult(`Login failed: ${error.message}`, 'error');
+                }
+            });
+            
+            document.getElementById('testLogout').addEventListener('click', async () => {
+                addTestResult('Attempting logout...', 'info');
+                
+                try {
+                    if (window.AuthService) {
+                        await window.AuthService.logout();
+                        addTestResult('Logout successful', 'success');
+                    } else {
+                        addTestResult('AuthService not available', 'error');
+                    }
+                } catch (error) {
+                    addTestResult(`Logout failed: ${error.message}`, 'error');
+                }
+            });
+            
+            document.getElementById('clearResults').addEventListener('click', () => {
+                testResults = [];
+                updateTestResults();
+            });
+            
+            document.getElementById('applyConfig').addEventListener('click', () => {
+                addTestResult('Configuration changes require editing auth-service.js manually', 'warning');
+            });
+        });
+    </script>
+</body>
+</html>

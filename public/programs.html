@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="yuB84mu_L05PDvJ5M36dWrDtpUPWU6kCI5Nd-nI4A4M" />
+    <title>Our Programs - Jivan-Jyoti Foundation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-inter bg-gray-50 text-gray-800">
+
+<!-- Header Section -->
+<header class="bg-green-800 text-white shadow-lg">
+    <nav class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="text-2xl md:text-3xl font-bold text-green-200 hover:text-green-100 transition duration-300 rounded-md p-2">
+                Jivan-Jyoti Foundation
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex">
+                <ul class="flex space-x-6 text-lg">
+                    <li><a href="index.html" class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Home</a></li>
+                    <li><a href="about.html" class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">About</a></li>
+                    <li><a href="programs.html" class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700 bg-green-700">Programs</a></li>
+                    <li><a href="team.html" class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Team</a></li>
+                    <li><a href="gallery.html" class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Gallery</a></li>
+                    <li><a href="news.html" class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">News</a></li>
+                    <li><a href="contact.html" class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Contact</a></li>
+                    <li><a href="login.html" class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Login</a></li>
+                </ul>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="hamburgerBtn" class="md:hidden focus:outline-none focus:ring-2 focus:ring-green-300 p-2 rounded-md">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="mobile-menu-hidden md:hidden bg-green-800 mt-4 mobile-menu-container">
+            <div class="py-2">
+                <a href="index.html" class="mobile-nav-link"><i class="fas fa-home mr-2"></i>Home</a>
+                <a href="about.html" class="mobile-nav-link"><i class="fas fa-info-circle mr-2"></i>About</a>
+                <a href="programs.html" class="mobile-nav-link"><i class="fas fa-tasks mr-2"></i>Programs</a>
+                <a href="team.html" class="mobile-nav-link"><i class="fas fa-users mr-2"></i>Team</a>
+                <a href="gallery.html" class="mobile-nav-link"><i class="fas fa-images mr-2"></i>Gallery</a>
+                <a href="news.html" class="mobile-nav-link"><i class="fas fa-newspaper mr-2"></i>News</a>
+                <a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope mr-2"></i>Contact</a>
+                <a href="login.html" class="mobile-nav-link"><i class="fas fa-sign-in-alt mr-2"></i>Login</a>
+            </div>
+        </div>
+    </nav>
+    <div id="mobileMenuOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden"></div>
+</header>
+
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-green-600 to-green-800 text-white py-20">
+    <div class="container mx-auto px-4">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-down">Our Programs</h1>
+            <p class="text-xl md:text-2xl mb-8 animate-fade-in-up">Making a Difference Through Comprehensive Environmental and Social Initiatives</p>
+            <div class="flex justify-center">
+                <a href="#programs" class="bg-white text-green-800 font-bold py-3 px-8 rounded-full text-lg hover:bg-green-100 transition duration-300 animate-bounce-once">
+                    <i class="fas fa-arrow-down mr-2"></i>Explore Programs
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Programs Section -->
+<section id="programs" class="py-16">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Key Programs</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">We focus on creating sustainable solutions for environmental conservation, education, and community development</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Environmental Conservation -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <div class="bg-green-500 text-white p-6">
+                    <i class="fas fa-leaf text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold">Environmental Conservation</h3>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-3 text-gray-700">
+                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Reforestation & Tree Plantation</li>
+                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Wildlife Protection Initiatives</li>
+                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Water Conservation Projects</li>
+                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Biodiversity Preservation</li>
+                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Sustainable Agriculture Promotion</li>
+                    </ul>
+                    <div class="mt-6">
+                        <button class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition duration-300" onclick="showProgramDetails('environmental')">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education & Awareness -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <div class="bg-blue-500 text-white p-6">
+                    <i class="fas fa-graduation-cap text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold">Education & Awareness</h3>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-3 text-gray-700">
+                        <li><i class="fas fa-check-circle text-blue-500 mr-2"></i>Environmental Education Programs</li>
+                        <li><i class="fas fa-check-circle text-blue-500 mr-2"></i>Community Workshops</li>
+                        <li><i class="fas fa-check-circle text-blue-500 mr-2"></i>School & College Outreach</li>
+                        <li><i class="fas fa-check-circle text-blue-500 mr-2"></i>Digital Awareness Campaigns</li>
+                        <li><i class="fas fa-check-circle text-blue-500 mr-2"></i>Training & Capacity Building</li>
+                    </ul>
+                    <div class="mt-6">
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300" onclick="showProgramDetails('education')">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Community Development -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <div class="bg-purple-500 text-white p-6">
+                    <i class="fas fa-hands-helping text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold">Community Development</h3>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-3 text-gray-700">
+                        <li><i class="fas fa-check-circle text-purple-500 mr-2"></i>Rural Development Projects</li>
+                        <li><i class="fas fa-check-circle text-purple-500 mr-2"></i>Women Empowerment Programs</li>
+                        <li><i class="fas fa-check-circle text-purple-500 mr-2"></i>Youth Development Initiatives</li>
+                        <li><i class="fas fa-check-circle text-purple-500 mr-2"></i>Livelihood Enhancement</li>
+                        <li><i class="fas fa-check-circle text-purple-500 mr-2"></i>Healthcare Awareness</li>
+                    </ul>
+                    <div class="mt-6">
+                        <button class="bg-purple-500 text-white px-4 py-2 rounded-md hover:bg-purple-600 transition duration-300" onclick="showProgramDetails('community')">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Climate Action -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <div class="bg-red-500 text-white p-6">
+                    <i class="fas fa-thermometer-half text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold">Climate Action</h3>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-3 text-gray-700">
+                        <li><i class="fas fa-check-circle text-red-500 mr-2"></i>Carbon Footprint Reduction</li>
+                        <li><i class="fas fa-check-circle text-red-500 mr-2"></i>Renewable Energy Advocacy</li>
+                        <li><i class="fas fa-check-circle text-red-500 mr-2"></i>Climate Change Mitigation</li>
+                        <li><i class="fas fa-check-circle text-red-500 mr-2"></i>Disaster Risk Reduction</li>
+                        <li><i class="fas fa-check-circle text-red-500 mr-2"></i>Green Technology Promotion</li>
+                    </ul>
+                    <div class="mt-6">
+                        <button class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-300" onclick="showProgramDetails('climate')">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Research & Innovation -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <div class="bg-indigo-500 text-white p-6">
+                    <i class="fas fa-microscope text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold">Research & Innovation</h3>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-3 text-gray-700">
+                        <li><i class="fas fa-check-circle text-indigo-500 mr-2"></i>Environmental Research Projects</li>
+                        <li><i class="fas fa-check-circle text-indigo-500 mr-2"></i>Innovation Labs</li>
+                        <li><i class="fas fa-check-circle text-indigo-500 mr-2"></i>Data Collection & Analysis</li>
+                        <li><i class="fas fa-check-circle text-indigo-500 mr-2"></i>Technology Development</li>
+                        <li><i class="fas fa-check-circle text-indigo-500 mr-2"></i>Policy Research</li>
+                    </ul>
+                    <div class="mt-6">
+                        <button class="bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 transition duration-300" onclick="showProgramDetails('research')">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Volunteer Programs -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <div class="bg-yellow-500 text-white p-6">
+                    <i class="fas fa-volunteer text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold">Volunteer Programs</h3>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-3 text-gray-700">
+                        <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Community Engagement</li>
+                        <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Skill-based Volunteering</li>
+                        <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Youth Volunteer Programs</li>
+                        <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Corporate Volunteering</li>
+                        <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>International Partnerships</li>
+                    </ul>
+                    <div class="mt-6">
+                        <button class="bg-yellow-500 text-white px-4 py-2 rounded-md hover:bg-yellow-600 transition duration-300" onclick="showProgramDetails('volunteer')">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Impact Statistics -->
+<section class="bg-green-800 text-white py-16">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Impact</h2>
+            <p class="text-lg text-green-200">Measurable change through dedicated efforts</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="text-center">
+                <div class="text-4xl md:text-5xl font-bold mb-2" id="counter1">0</div>
+                <div class="text-lg text-green-200">Trees Planted</div>
+            </div>
+            <div class="text-center">
+                <div class="text-4xl md:text-5xl font-bold mb-2" id="counter2">0</div>
+                <div class="text-lg text-green-200">People Reached</div>
+            </div>
+            <div class="text-center">
+                <div class="text-4xl md:text-5xl font-bold mb-2" id="counter3">0</div>
+                <div class="text-lg text-green-200">Projects Completed</div>
+            </div>
+            <div class="text-center">
+                <div class="text-4xl md:text-5xl font-bold mb-2" id="counter4">0</div>
+                <div class="text-lg text-green-200">Volunteers Engaged</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-16">
+    <div class="container mx-auto px-4">
+        <div class="bg-gradient-to-r from-green-600 to-blue-600 rounded-lg text-white p-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Get Involved Today</h2>
+            <p class="text-lg mb-8">Join us in creating a sustainable future for our planet and communities</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="volunteer.html" class="bg-white text-green-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300">
+                    Become a Volunteer
+                </a>
+                <a href="donate.html" class="border-2 border-white text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-green-600 transition duration-300">
+                    Make a Donation
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Program Details Modal -->
+<div id="programModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+    <div class="flex items-center justify-center min-h-screen p-4">
+        <div class="bg-white rounded-lg max-w-2xl w-full max-h-96 overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 id="modalTitle" class="text-2xl font-bold"></h3>
+                    <button onclick="closeProgramModal()" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                <div id="modalContent" class="text-gray-700">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4">Jivan-Jyoti Foundation</h3>
+                <p class="text-gray-300">Dedicated to environmental conservation and sustainable development for a better tomorrow.</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="about.html" class="text-gray-300 hover:text-white">About Us</a></li>
+                    <li><a href="programs.html" class="text-gray-300 hover:text-white">Programs</a></li>
+                    <li><a href="team.html" class="text-gray-300 hover:text-white">Our Team</a></li>
+                    <li><a href="contact.html" class="text-gray-300 hover:text-white">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Programs</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-300 hover:text-white">Environmental Conservation</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white">Education & Awareness</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white">Community Development</a></li>
+                    <li><a href="volunteer.html" class="text-gray-300 hover:text-white">Volunteer</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Connect With Us</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+            <p class="text-gray-300">&copy; 2024 Jivan-Jyoti Foundation. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/navigation.js"></script>
+<script>
+// Counter animation
+function animateCounters() {
+    const counters = [
+        { element: document.getElementById('counter1'), target: 50000, suffix: '+' },
+        { element: document.getElementById('counter2'), target: 100000, suffix: '+' },
+        { element: document.getElementById('counter3'), target: 150, suffix: '+' },
+        { element: document.getElementById('counter4'), target: 5000, suffix: '+' }
+    ];
+
+    counters.forEach(counter => {
+        let current = 0;
+        const increment = counter.target / 50;
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= counter.target) {
+                current = counter.target;
+                clearInterval(timer);
+            }
+            counter.element.textContent = Math.floor(current) + counter.suffix;
+        }, 50);
+    });
+}
+
+// Intersection Observer for counter animation
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounters();
+            observer.unobserve(entry.target);
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const statsSection = document.querySelector('.bg-green-800');
+    if (statsSection) {
+        observer.observe(statsSection);
+    }
+});
+
+// Program details modal
+const programDetails = {
+    environmental: {
+        title: "Environmental Conservation Program",
+        content: `
+            <h4 class="font-bold text-lg mb-3">Our Comprehensive Environmental Conservation Initiatives</h4>
+            <p class="mb-4">We are committed to protecting and restoring our natural ecosystems through scientifically-backed conservation programs.</p>
+            
+            <h5 class="font-semibold mb-2">Key Activities:</h5>
+            <ul class="list-disc list-inside space-y-2 mb-4">
+                <li>Large-scale reforestation projects in degraded areas</li>
+                <li>Native species conservation and habitat restoration</li>
+                <li>Wetland conservation and restoration projects</li>
+                <li>Marine ecosystem protection initiatives</li>
+                <li>Sustainable land management practices</li>
+            </ul>
+            
+            <h5 class="font-semibold mb-2">Impact Areas:</h5>
+            <ul class="list-disc list-inside space-y-2">
+                <li>Biodiversity hotspots across multiple regions</li>
+                <li>Critical watershed areas</li>
+                <li>Urban green space development</li>
+                <li>Coastal and marine protected areas</li>
+            </ul>
+        `
+    },
+    education: {
+        title: "Education & Awareness Program",
+        content: `
+            <h4 class="font-bold text-lg mb-3">Building Environmental Consciousness Through Education</h4>
+            <p class="mb-4">Our education programs aim to create informed citizens who understand environmental challenges and are equipped to take action.</p>
+            
+            <h5 class="font-semibold mb-2">Program Components:</h5>
+            <ul class="list-disc list-inside space-y-2 mb-4">
+                <li>Interactive workshops for schools and colleges</li>
+                <li>Teacher training programs on environmental education</li>
+                <li>Digital learning platforms and resources</li>
+                <li>Community awareness campaigns</li>
+                <li>Professional development courses</li>
+            </ul>
+            
+            <h5 class="font-semibold mb-2">Target Audiences:</h5>
+            <ul class="list-disc list-inside space-y-2">
+                <li>Students from primary to university level</li>
+                <li>Teachers and educators</li>
+                <li>Community leaders and decision-makers</li>
+                <li>Corporate professionals</li>
+            </ul>
+        `
+    },
+    community: {
+        title: "Community Development Program",
+        content: `
+            <h4 class="font-bold text-lg mb-3">Empowering Communities for Sustainable Development</h4>
+            <p class="mb-4">We work closely with local communities to develop sustainable livelihoods while protecting the environment.</p>
+            
+            <h5 class="font-semibold mb-2">Focus Areas:</h5>
+            <ul class="list-disc list-inside space-y-2 mb-4">
+                <li>Women's self-help groups and microfinance</li>
+                <li>Sustainable agriculture and organic farming</li>
+                <li>Skill development and vocational training</li>
+                <li>Healthcare and nutrition programs</li>
+                <li>Youth leadership development</li>
+            </ul>
+            
+            <h5 class="font-semibold mb-2">Approach:</h5>
+            <ul class="list-disc list-inside space-y-2">
+                <li>Participatory community planning</li>
+                <li>Local resource mobilization</li>
+                <li>Capacity building and training</li>
+                <li>Technology transfer and innovation</li>
+            </ul>
+        `
+    },
+    climate: {
+        title: "Climate Action Program",
+        content: `
+            <h4 class="font-bold text-lg mb-3">Leading the Fight Against Climate Change</h4>
+            <p class="mb-4">Our climate action initiatives focus on both mitigation and adaptation strategies to address the climate crisis.</p>
+            
+            <h5 class="font-semibold mb-2">Mitigation Efforts:</h5>
+            <ul class="list-disc list-inside space-y-2 mb-4">
+                <li>Carbon sequestration through afforestation</li>
+                <li>Renewable energy advocacy and implementation</li>
+                <li>Energy efficiency programs</li>
+                <li>Sustainable transportation initiatives</li>
+                <li>Waste reduction and circular economy promotion</li>
+            </ul>
+            
+            <h5 class="font-semibold mb-2">Adaptation Strategies:</h5>
+            <ul class="list-disc list-inside space-y-2">
+                <li>Climate-resilient agriculture techniques</li>
+                <li>Water conservation and management</li>
+                <li>Disaster preparedness and response</li>
+                <li>Ecosystem-based adaptation solutions</li>
+            </ul>
+        `
+    },
+    research: {
+        title: "Research & Innovation Program",
+        content: `
+            <h4 class="font-bold text-lg mb-3">Advancing Knowledge for Environmental Solutions</h4>
+            <p class="mb-4">Our research initiatives generate evidence-based solutions for environmental and social challenges.</p>
+            
+            <h5 class="font-semibold mb-2">Research Areas:</h5>
+            <ul class="list-disc list-inside space-y-2 mb-4">
+                <li>Ecosystem monitoring and assessment</li>
+                <li>Climate change impact studies</li>
+                <li>Biodiversity conservation research</li>
+                <li>Sustainable technology development</li>
+                <li>Social impact assessment</li>
+            </ul>
+            
+            <h5 class="font-semibold mb-2">Innovation Focus:</h5>
+            <ul class="list-disc list-inside space-y-2">
+                <li>Green technology development</li>
+                <li>Data analytics and modeling</li>
+                <li>Community-based monitoring systems</li>
+                <li>Digital platforms for environmental management</li>
+            </ul>
+        `
+    },
+    volunteer: {
+        title: "Volunteer Program",
+        content: `
+            <h4 class="font-bold text-lg mb-3">Join Our Mission as a Volunteer</h4>
+            <p class="mb-4">Our volunteer program offers diverse opportunities for individuals to contribute their skills and passion to environmental conservation.</p>
+            
+            <h5 class="font-semibold mb-2">Volunteer Opportunities:</h5>
+            <ul class="list-disc list-inside space-y-2 mb-4">
+                <li>Field conservation work and tree planting</li>
+                <li>Educational program delivery and support</li>
+                <li>Data collection and research assistance</li>
+                <li>Community outreach and engagement</li>
+                <li>Administrative and technical support</li>
+            </ul>
+            
+            <h5 class="font-semibold mb-2">Benefits of Volunteering:</h5>
+            <ul class="list-disc list-inside space-y-2">
+                <li>Hands-on environmental conservation experience</li>
+                <li>Skill development and training opportunities</li>
+                <li>Networking with like-minded individuals</li>
+                <li>Recognition and certificates</li>
+                <li>Personal satisfaction and growth</li>
+            </ul>
+        `
+    }
+};
+
+function showProgramDetails(programType) {
+    const modal = document.getElementById('programModal');
+    const title = document.getElementById('modalTitle');
+    const content = document.getElementById('modalContent');
+    
+    const program = programDetails[programType];
+    if (program) {
+        title.textContent = program.title;
+        content.innerHTML = program.content;
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeProgramModal() {
+    const modal = document.getElementById('programModal');
+    modal.classList.add('hidden');
+    document.body.style.overflow = '';
+}
+
+// Close modal when clicking outside
+document.getElementById('programModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeProgramModal();
+    }
+});
+</script>
+
+</body>
+</html>

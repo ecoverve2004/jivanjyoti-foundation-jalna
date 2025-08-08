@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="yuB84mu_L05PDvJ5M36dWrDtpUPWU6kCI5Nd-nI4A4M" />
+    <meta name="msvalidate.01" content="6806C52ECE736A948EFF4C3451B923BE" />
+    <title>Gallery - Jivan-Jyoti Foundation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-inter bg-gray-50 text-gray-800">
+
+<!-- Header Section -->
+<header class="bg-green-800 text-white shadow-lg">
+    <nav class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="text-2xl md:text-3xl font-bold text-green-200 hover:text-green-100 transition duration-300 rounded-md p-2">
+                Jivan-Jyoti Foundation
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex">
+                <ul class="flex space-x-6 text-lg">
+                    <li><a href="index.html" class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Home</a></li>
+                    <li><a href="about.html" class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">About</a></li>
+                    <li><a href="programs.html" class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Programs</a></li>
+                    <li><a href="team.html" class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Team</a></li>
+                    <li><a href="gallery.html" class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700 bg-green-700">Gallery</a></li>
+                    <li><a href="news.html" class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">News</a></li>
+                    <li><a href="contact.html" class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Contact</a></li>
+                    <li><a href="login.html" class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Login</a></li>
+                </ul>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="hamburgerBtn" class="md:hidden focus:outline-none focus:ring-2 focus:ring-green-300 p-2 rounded-md">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="mobile-menu-hidden md:hidden bg-green-800 mt-4 mobile-menu-container">
+            <div class="py-2">
+                <a href="index.html" class="mobile-nav-link"><i class="fas fa-home mr-2"></i>Home</a>
+                <a href="about.html" class="mobile-nav-link"><i class="fas fa-info-circle mr-2"></i>About</a>
+                <a href="programs.html" class="mobile-nav-link"><i class="fas fa-tasks mr-2"></i>Programs</a>
+                <a href="team.html" class="mobile-nav-link"><i class="fas fa-users mr-2"></i>Team</a>
+                <a href="gallery.html" class="mobile-nav-link"><i class="fas fa-images mr-2"></i>Gallery</a>
+                <a href="news.html" class="mobile-nav-link"><i class="fas fa-newspaper mr-2"></i>News</a>
+                <a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope mr-2"></i>Contact</a>
+                <a href="login.html" class="mobile-nav-link"><i class="fas fa-sign-in-alt mr-2"></i>Login</a>
+            </div>
+        </div>
+    </nav>
+    <div id="mobileMenuOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden"></div>
+</header>
+
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-green-600 to-blue-600 text-white py-20">
+    <div class="container mx-auto px-4">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-down">Our Gallery</h1>
+            <p class="text-xl md:text-2xl mb-8 animate-fade-in-up">Capturing Moments of Environmental Conservation and Community Impact</p>
+            <div class="flex justify-center">
+                <a href="#gallery-content" class="bg-white text-green-800 font-bold py-3 px-8 rounded-full text-lg hover:bg-green-100 transition duration-300 animate-bounce-once">
+                    <i class="fas fa-arrow-down mr-2"></i>View Gallery
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Filter Tabs -->
+<section class="py-8 bg-white shadow-sm">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-center gap-4">
+            <button onclick="filterGallery('all')" class="filter-btn bg-green-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-green-700 transition duration-300" data-filter="all">
+                All Photos
+            </button>
+            <button onclick="filterGallery('conservation')" class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-semibold hover:bg-green-600 hover:text-white transition duration-300" data-filter="conservation">
+                Conservation
+            </button>
+            <button onclick="filterGallery('education')" class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-semibold hover:bg-green-600 hover:text-white transition duration-300" data-filter="education">
+                Education
+            </button>
+            <button onclick="filterGallery('community')" class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-semibold hover:bg-green-600 hover:text-white transition duration-300" data-filter="community">
+                Community
+            </button>
+            <button onclick="filterGallery('events')" class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-semibold hover:bg-green-600 hover:text-white transition duration-300" data-filter="events">
+                Events
+            </button>
+            <button onclick="filterGallery('wildlife')" class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-semibold hover:bg-green-600 hover:text-white transition duration-300" data-filter="wildlife">
+                Wildlife
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Grid -->
+<section id="gallery-content" class="py-16">
+    <div class="container mx-auto px-4">
+        <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Conservation Photos -->
+            <div class="gallery-item conservation relative group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openLightbox('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'Tree Planting Initiative', 'Our volunteers planting saplings in the reforestation project.')">
+                <img src="/images/a.jpg" alt="Tree Planting" class="w-full h-64 object-cover transition duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition duration-300"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition duration-300">
+                    <h3 class="font-bold text-lg">Tree Planting Initiative</h3>
+                    <p class="text-sm">Reforestation project in action</p>
+                </div>
+            </div>
+
+            <div class="gallery-item conservation relative group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openLightbox('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'Forest Conservation', 'Protecting our natural forests and biodiversity.')">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Forest Conservation" class="w-full h-64 object-cover transition duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition duration-300"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition duration-300">
+                    <h3 class="font-bold text-lg">Forest Conservation</h3>
+                    <p class="text-sm">Protecting natural habitats</p>
+                </div>
+            </div>
+
+            <div class="gallery-item conservation relative group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openLightbox('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'River Cleanup', 'Community volunteers cleaning up river banks.')">
+                <img src="/images/n.jpg" alt="River Cleanup" class="w-full h-64 object-cover transition duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition duration-300"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition duration-300">
+                    <h3 class="font-bold text-lg">River Cleanup</h3>
+                    <p class="text-sm">Water conservation efforts</p>
+                </div>
+            </div>
+
+            <!-- Education Photos -->
+            <div class="gallery-item education relative group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openLightbox('https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'Environmental Workshop', 'Teaching children about environmental conservation.')">
+                <img src="/images//school work/school1.jpg" alt="Environmental Workshop" class="w-full h-64 object-cover transition duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition duration-300"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition duration-300">
+                    <h3 class="font-bold text-lg">Environmental Workshop</h3>
+                    <p class="text-sm">Educational outreach program</p>
+                </div>
+            </div>
+
+            <div class="gallery-item education relative group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openLightbox('https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'School Visit', 'Interactive learning sessions in schools.')">
+                <img src="/images//school work/School1_cleanup.jpg" alt="School Visit" class="w-full h-64 object-cover transition duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition duration-300"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition duration-300">
+                    <h3 class="font-bold text-lg">School Visit</h3>
+                    <p class="text-sm">Interactive learning sessions</p>
+                </div>
+            </div>
+
+            <!-- Community Photos -->
+            <div class="gallery-item community relative group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openLightbox('https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'Community Meeting', 'Local community participating in environmental planning.')">
+                <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Community Meeting" class="w-full h-64 object-cover transition duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition duration-300"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition duration-300">
+                    <h3 class="font-bold text-lg">Community Meeting</h3>
+                    <p class="text-sm">Participatory planning session</p>
+                </div>
+            </div>
+
+            <div class="gallery-item community relative group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openLightbox('https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'Women Empowerment', 'Women learning sustainable farming techniques.')">
+                <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Women Empowerment" class="w-full h-64 object-cover transition duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition duration-300"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition duration-300">
+                    <h3 class="font-bold text-lg">Women Empowerment</h3>
+                    <p class="text-sm">Sustainable farming training</p>
+                </div>
+            </div>
+
+            <!-- Events Photos -->
+            <div class="gallery-item events relative group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openLightbox('https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'Earth Day Celebration', 'Annual Earth Day event with hundreds of participants.')">
+                <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Earth Day Celebration" class="w-full h-64 object-cover transition duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition duration-300"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition duration-300">
+                    <h3 class="font-bold text-lg">Earth Day Celebration</h3>
+                    <p class="text-sm">Annual environmental awareness event</p>
+                </div>
+            </div>
+
+            <div class="gallery-item events relative group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openLightbox('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'Volunteer Training', 'Training session for new volunteers.')">
+                <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Volunteer Training" class="w-full h-64 object-cover transition duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition duration-300"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition duration-300">
+                    <h3 class="font-bold text-lg">Volunteer Training</h3>
+                    <p class="text-sm">Building our volunteer community</p>
+                </div>
+            </div>
+
+            <!-- Wildlife Photos -->
+            <div class="gallery-item wildlife relative group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openLightbox('https://images.unsplash.com/photo-1549366021-9f761d040a94?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'Bird Conservation', 'Protecting native bird species and their habitats.')">
+                <img src="https://images.unsplash.com/photo-1549366021-9f761d040a94?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Bird Conservation" class="w-full h-64 object-cover transition duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition duration-300"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition duration-300">
+                    <h3 class="font-bold text-lg">Bird Conservation</h3>
+                    <p class="text-sm">Protecting native species</p>
+                </div>
+            </div>
+
+            <div class="gallery-item wildlife relative group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openLightbox('https://images.unsplash.com/photo-1562095241-8c6714fd4178?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'Wildlife Monitoring', 'Research team monitoring wildlife populations.')">
+                <img src="https://images.unsplash.com/photo-1562095241-8c6714fd4178?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Wildlife Monitoring" class="w-full h-64 object-cover transition duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition duration-300"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition duration-300">
+                    <h3 class="font-bold text-lg">Wildlife Monitoring</h3>
+                    <p class="text-sm">Scientific research and tracking</p>
+                </div>
+            </div>
+
+            <!-- Additional Images -->
+            <div class="gallery-item conservation relative group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openLightbox('https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'Solar Panel Installation', 'Promoting renewable energy in rural communities.')">
+                <img src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Solar Panel Installation" class="w-full h-64 object-cover transition duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition duration-300"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition duration-300">
+                    <h3 class="font-bold text-lg">Solar Panel Installation</h3>
+                    <p class="text-sm">Renewable energy initiative</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center mt-12">
+            <button id="loadMoreBtn" class="bg-green-600 text-white font-bold py-3 px-8 rounded-full hover:bg-green-700 transition duration-300">
+                <i class="fas fa-plus mr-2"></i>Load More Photos
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden">
+    <div class="flex items-center justify-center min-h-screen p-4">
+        <div class="relative max-w-4xl w-full">
+            <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white text-3xl hover:text-gray-300 z-10">
+                <i class="fas fa-times"></i>
+            </button>
+            <button onclick="prevImage()" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl hover:text-gray-300 z-10">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button onclick="nextImage()" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl hover:text-gray-300 z-10">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="text-center">
+                <img id="lightboxImage" src="" alt="" class="max-w-full max-h-screen object-contain mx-auto">
+                <div class="text-white mt-4">
+                    <h3 id="lightboxTitle" class="text-2xl font-bold mb-2"></h3>
+                    <p id="lightboxDescription" class="text-lg"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4">Jivan-Jyoti Foundation</h3>
+                <p class="text-gray-300">Dedicated to environmental conservation and sustainable development for a better tomorrow.</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="about.html" class="text-gray-300 hover:text-white">About Us</a></li>
+                    <li><a href="programs.html" class="text-gray-300 hover:text-white">Programs</a></li>
+                    <li><a href="team.html" class="text-gray-300 hover:text-white">Our Team</a></li>
+                    <li><a href="contact.html" class="text-gray-300 hover:text-white">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Gallery</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" onclick="filterGallery('conservation')" class="text-gray-300 hover:text-white">Conservation</a></li>
+                    <li><a href="#" onclick="filterGallery('education')" class="text-gray-300 hover:text-white">Education</a></li>
+                    <li><a href="#" onclick="filterGallery('community')" class="text-gray-300 hover:text-white">Community</a></li>
+                    <li><a href="#" onclick="filterGallery('events')" class="text-gray-300 hover:text-white">Events</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Connect With Us</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center text-gray-300 text-sm">
+                <div class="mb-2 md:mb-0">
+                    &copy; 2025 JivanJyoti Foundation. All rights reserved.
+                </div>
+                <div class="flex items-center space-x-2">
+                    <span>💻 Developed with</span>
+                    <span class="text-red-400">❤️</span>
+                    <span>by</span>
+                    <a href="#" class="text-green-400 hover:text-green-300 font-semibold transition duration-300">
+                        Anurag Sarwade
+                    </a>
+                    <span class="text-gray-600">|</span>
+                    <span class="text-xs text-gray-600">Full Stack Developer</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/navigation.js"></script>
+<script>
+// Gallery functionality
+const galleryImages = [
+    {
+        src: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        title: 'Tree Planting Initiative',
+        description: 'Our volunteers planting saplings in the reforestation project.',
+        category: 'conservation'
+    },
+    {
+        src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        title: 'Forest Conservation',
+        description: 'Protecting our natural forests and biodiversity.',
+        category: 'conservation'
+    },
+    {
+        src: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        title: 'River Cleanup',
+        description: 'Community volunteers cleaning up river banks.',
+        category: 'conservation'
+    },
+    {
+        src: 'https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        title: 'Environmental Workshop',
+        description: 'Teaching children about environmental conservation.',
+        category: 'education'
+    },
+    {
+        src: 'https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        title: 'School Visit',
+        description: 'Interactive learning sessions in schools.',
+        category: 'education'
+    },
+    {
+        src: 'https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        title: 'Community Meeting',
+        description: 'Local community participating in environmental planning.',
+        category: 'community'
+    },
+    {
+        src: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        title: 'Women Empowerment',
+        description: 'Women learning sustainable farming techniques.',
+        category: 'community'
+    },
+    {
+        src: 'https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        title: 'Earth Day Celebration',
+        description: 'Annual Earth Day event with hundreds of participants.',
+        category: 'events'
+    },
+    {
+        src: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        title: 'Volunteer Training',
+        description: 'Training session for new volunteers.',
+        category: 'events'
+    },
+    {
+        src: 'https://images.unsplash.com/photo-1549366021-9f761d040a94?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        title: 'Bird Conservation',
+        description: 'Protecting native bird species and their habitats.',
+        category: 'wildlife'
+    },
+    {
+        src: 'https://images.unsplash.com/photo-1562095241-8c6714fd4178?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        title: 'Wildlife Monitoring',
+        description: 'Research team monitoring wildlife populations.',
+        category: 'wildlife'
+    },
+    {
+        src: 'https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        title: 'Solar Panel Installation',
+        description: 'Promoting renewable energy in rural communities.',
+        category: 'conservation'
+    }
+];
+
+let currentImageIndex = 0;
+let filteredImages = galleryImages;
+
+// Filter functionality
+function filterGallery(category) {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    filterBtns.forEach(btn => {
+        btn.classList.remove('bg-green-600', 'text-white');
+        btn.classList.add('bg-gray-200', 'text-gray-700');
+    });
+    
+    const activeBtn = document.querySelector(`[data-filter="${category}"]`);
+    activeBtn.classList.remove('bg-gray-200', 'text-gray-700');
+    activeBtn.classList.add('bg-green-600', 'text-white');
+    
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    if (category === 'all') {
+        filteredImages = galleryImages;
+        galleryItems.forEach(item => {
+            item.style.display = 'block';
+            item.style.animation = 'fadeInUp 0.5s ease-out';
+        });
+    } else {
+        filteredImages = galleryImages.filter(img => img.category === category);
+        galleryItems.forEach(item => {
+            if (item.classList.contains(category)) {
+                item.style.display = 'block';
+                item.style.animation = 'fadeInUp 0.5s ease-out';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+}
+
+// Lightbox functionality
+function openLightbox(src, title, description) {
+    currentImageIndex = filteredImages.findIndex(img => img.src === src);
+    document.getElementById('lightboxImage').src = src;
+    document.getElementById('lightboxTitle').textContent = title;
+    document.getElementById('lightboxDescription').textContent = description;
+    document.getElementById('lightbox').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    document.getElementById('lightbox').classList.add('hidden');
+    document.body.style.overflow = '';
+}
+
+function nextImage() {
+    if (currentImageIndex < filteredImages.length - 1) {
+        currentImageIndex++;
+    } else {
+        currentImageIndex = 0;
+    }
+    updateLightboxImage();
+}
+
+function prevImage() {
+    if (currentImageIndex > 0) {
+        currentImageIndex--;
+    } else {
+        currentImageIndex = filteredImages.length - 1;
+    }
+    updateLightboxImage();
+}
+
+function updateLightboxImage() {
+    const image = filteredImages[currentImageIndex];
+    document.getElementById('lightboxImage').src = image.src;
+    document.getElementById('lightboxTitle').textContent = image.title;
+    document.getElementById('lightboxDescription').textContent = image.description;
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', function(e) {
+    if (!document.getElementById('lightbox').classList.contains('hidden')) {
+        if (e.key === 'ArrowLeft') {
+            prevImage();
+        } else if (e.key === 'ArrowRight') {
+            nextImage();
+        } else if (e.key === 'Escape') {
+            closeLightbox();
+        }
+    }
+});
+
+// Close lightbox when clicking outside
+document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeLightbox();
+    }
+});
+
+// Load more functionality (simulated)
+document.getElementById('loadMoreBtn').addEventListener('click', function() {
+    this.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Loading...';
+    
+    setTimeout(() => {
+        this.innerHTML = '<i class="fas fa-check mr-2"></i>All Photos Loaded';
+        this.disabled = true;
+        this.classList.add('opacity-50', 'cursor-not-allowed');
+    }, 2000);
+});
+
+// Smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Initialize gallery
+document.addEventListener('DOMContentLoaded', function() {
+    // Add animation delays to gallery items
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    galleryItems.forEach((item, index) => {
+        item.style.animationDelay = `${index * 0.1}s`;
+        item.classList.add('animate-fade-in-up');
+    });
+});
+</script>
+
+</body>
+</html>

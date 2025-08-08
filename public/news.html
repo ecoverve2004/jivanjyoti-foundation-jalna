@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="yuB84mu_L05PDvJ5M36dWrDtpUPWU6kCI5Nd-nI4A4M" />
+    <meta name="msvalidate.01" content="6806C52ECE736A948EFF4C3451B923BE" />
+    <title>News & Updates - Green Forest</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="font-inter bg-gray-50 text-gray-800">
+    <!-- Header Section -->
+    <header class="bg-green-800 text-white shadow-lg">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="index.html"
+                    class="text-2xl md:text-3xl font-bold text-green-200 hover:text-green-100 transition duration-300 rounded-md p-2">
+                    Jivan-Jyoti Foundation
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex">
+                    <ul class="flex space-x-6 text-lg">
+                        <li><a href="index.html"
+                                class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Home</a>
+                        </li>
+                        <li><a href="about.html"
+                                class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">About
+                                Us</a></li>
+                        <li><a href="team.html"
+                                class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Our
+                                Team</a></li>
+                        <li><a href="project.html"
+                                class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Projects</a>
+                        </li>
+                        <li><a href="news.html"
+                                class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700 bg-green-700">News</a>
+                        </li>
+                        <li><a href="donate.html"
+                                class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Donate</a>
+                        </li>
+                        <li><a href="contact.html"
+                                class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Contact</a>
+                        </li>
+                        <li><a href="login.html"
+                                class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Login</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="hamburgerBtn" class="md:hidden focus:outline-none focus:ring-2 focus:ring-green-300 p-2 rounded-md">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="mobile-menu-hidden md:hidden bg-green-800 mt-4 mobile-menu-container">
+                <div class="py-2">
+                    <a href="index.html" class="mobile-nav-link">
+                        <i class="fas fa-home mr-2"></i>Home
+                    </a>
+                    <a href="about.html" class="mobile-nav-link">
+                        <i class="fas fa-info-circle mr-2"></i>About Us
+                    </a>
+                    <a href="team.html" class="mobile-nav-link">
+                        <i class="fas fa-users mr-2"></i>Our Team
+                    </a>
+                    <a href="project.html" class="mobile-nav-link">
+                        <i class="fas fa-project-diagram mr-2"></i>Projects
+                    </a>
+                    <a href="news.html" class="mobile-nav-link bg-green-700">
+                        <i class="fas fa-newspaper mr-2"></i>News
+                    </a>
+                    <a href="donate.html" class="mobile-nav-link">
+                        <i class="fas fa-heart mr-2"></i>Donate
+                    </a>
+                    <a href="contact.html" class="mobile-nav-link">
+                        <i class="fas fa-envelope mr-2"></i>Contact
+                    </a>
+                    <a href="login.html" class="mobile-nav-link">
+                        <i class="fas fa-sign-in-alt mr-2"></i>Login
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobileMenuOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden"></div>
+    </header>
+
+    <!-- News Hero Section -->
+    <section class="relative bg-cover bg-center h-64 flex items-center justify-center text-white"
+        style="background-image: url('images/news.jpg');">
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="relative z-10 text-center">
+            <h1 class="text-5xl font-bold">News & Updates</h1>
+            <p class="text-xl mt-2">Stay informed about our latest conservation efforts.</p>
+        </div>
+    </section>
+
+    <!-- News Articles Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-green-800 mb-12 text-center">Recent Articles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- News Article 1 -->
+                <div
+                    class="bg-green-50 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <img src="images/n.jpg"
+                        alt="Tree Planting Event" class="rounded-t-lg w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-green-800 mb-3">Record-Breaking Tree Planting Event!</h3>
+                        <p class="text-gray-700 text-sm mb-4">
+                            Our recent community tree planting event saw over 5,000 saplings planted in a single day, a
+                            new record for GreenForest!
+                        </p>
+                        <span class="text-gray-500 text-xs block mb-4">Published on: July 20, 2025</span>
+                        <a href="#"
+                            class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-5 rounded-md text-md transition duration-300">
+                            Read More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News Article 2 -->
+                <div
+                    class="bg-green-50 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <img src="images/a.jpg"
+                        alt="New Conservation Area" class="rounded-t-lg w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-green-800 mb-3">New Conservation Area Established in
+                            Patagonia</h3>
+                        <p class="text-gray-700 text-sm mb-4">
+                            We are thrilled to announce the successful establishment of a new protected area,
+                            safeguarding critical ecosystems.
+                        </p>
+                        <span class="text-gray-500 text-xs block mb-4">Published on: July 15, 2025</span>
+                        <a href="#"
+                            class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-5 rounded-md text-md transition duration-300">
+                            Read More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News Article 3 -->
+                <div
+                    class="bg-green-50 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <img src="images/t.jpg"
+                        alt="Youth Environmental Summit" class="rounded-t-lg w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-green-800 mb-3">Youth Environmental Summit Highlights
+                        </h3>
+                        <p class="text-gray-700 text-sm mb-4">
+                            Inspiring young leaders gathered for our annual summit, sharing innovative ideas for a
+                            sustainable future.
+                        </p>
+                        <span class="text-gray-500 text-xs block mb-4">Published on: July 10, 2025</span>
+                        <a href="#"
+                            class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-5 rounded-md text-md transition duration-300">
+                            Read More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News Article 4 -->
+                <div
+                    class="bg-green-50 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <img src="https://placehold.co/600x400/065F46/FFFFFF?text=Volunteer+Spotlight"
+                        alt="Volunteer Spotlight" class="rounded-t-lg w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-green-800 mb-3">Volunteer Spotlight: Meet Maria Rodriguez
+                        </h3>
+                        <p class="text-gray-700 text-sm mb-4">
+                            Learn about Maria, one of our most dedicated volunteers, and her incredible contributions to
+                            our cause.
+                        </p>
+                        <span class="text-gray-500 text-xs block mb-4">Published on: July 5, 2025</span>
+                        <a href="#"
+                            class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-5 rounded-md text-md transition duration-300">
+                            Read More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News Article 5 -->
+                <div
+                    class="bg-green-50 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <img src="images/research.jpg"
+                        alt="Research Breakthrough" class="rounded-t-lg w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-green-800 mb-3">New Research on Forest Carbon
+                            Sequestration</h3>
+                        <p class="text-gray-700 text-sm mb-4">
+                            Our latest scientific findings highlight the crucial role of healthy forests in absorbing
+                            atmospheric carbon.
+                        </p>
+                        <span class="text-gray-500 text-xs block mb-4">Published on: June 28, 2025</span>
+                        <a href="#"
+                            class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-5 rounded-md text-md transition duration-300">
+                            Read More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News Article 6 -->
+                <div
+                    class="bg-green-50 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <img src="https://placehold.co/600x400/065F46/FFFFFF?text=Partnership+Announcement"
+                        alt="Partnership Announcement" class="rounded-t-lg w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-green-800 mb-3">Exciting Partnership with Global
+                            Eco-Alliance</h3>
+                        <p class="text-gray-700 text-sm mb-4">
+                            We've joined forces with a leading environmental organization to amplify our global impact.
+                        </p>
+                        <span class="text-gray-500 text-xs block mb-4">Published on: June 20, 2025</span>
+                        <a href="#"
+                            class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-5 rounded-md text-md transition duration-300">
+                            Read More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-16 bg-green-700 text-white text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-6">Never Miss an Update!</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Subscribe to our newsletter to get the latest news and insights
+                directly in your inbox.</p>
+            <a href="contact.html"
+                class="inline-block bg-white text-green-700 hover:bg-gray-200 font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">Subscribe
+                Now <i class="fas fa-envelope ml-2"></i></a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-gray-300 py-10">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-2xl font-bold text-white mb-4">JivanJyoti Foundation</h3>
+                <p class="text-gray-400">Dedicated to preserving the planet's natural beauty and vital ecosystems for
+                    future generations.</p>
+                <div class="flex space-x-4 mt-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i
+                            class="fab fa-facebook-f text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i
+                            class="fab fa-twitter text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i
+                            class="fab fa-instagram text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i
+                            class="fab fa-linkedin-in text-xl"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="about.html" class="hover:text-white transition duration-300">About Us</a></li>
+                    <li><a href="team.html" class="hover:text-white transition duration-300">Our Team</a></li>
+                    <li><a href="projects.html" class="hover:text-white transition duration-300">Projects</a></li>
+                    <li><a href="news.html" class="hover:text-white transition duration-300">News</a></li>
+                    <li><a href="donate.html" class="hover:text-white transition duration-300">Donate</a></li>
+                    <li><a href="contact.html" class="hover:text-white transition duration-300">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Legal</h3>
+                <ul class="space-y-2">
+                    <li><a href="privacy.html" class="hover:text-white transition duration-300">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-white transition duration-300">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500">
+            &copy; 2025 GreenForest. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Navigation Script -->
+    <script src="assets/js/navigation.js"></script>
+    <!-- Main JavaScript file -->
+    <script src="assets/js/script.js" defer type="module"></script>
+</body>
+
+</html>

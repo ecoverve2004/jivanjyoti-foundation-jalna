@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="yuB84mu_L05PDvJ5M36dWrDtpUPWU6kCI5Nd-nI4A4M" />
+    <meta name="msvalidate.01" content="6806C52ECE736A948EFF4C3451B923BE" />
+    <title>Tree Plantation - JivanJyoti Foundation</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Tree Animation CSS -->
+    <link rel="stylesheet" href="assets/css/tree-animation.css">
+    <!-- Chat Widget CSS -->
+    <link rel="stylesheet" href="assets/css/chat-widget.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="font-inter bg-gray-50 text-gray-800">
+    <!-- 3D Tree Rescue Animation Background -->
+    <div class="tree-rescue-animation">
+        <div class="scene">
+            <div class="crying-tree">
+                <div class="tree-trunk"></div>
+                <div class="tree-crown"></div>
+                <div class="tree-face">
+                    <div class="tree-eyes">
+                        <div class="eye"><div class="tear"></div></div>
+                        <div class="eye"><div class="tear"></div></div>
+                    </div>
+                    <div class="tree-mouth"></div>
+                </div>
+            </div>
+            <div class="axe">
+                <div class="axe-blade"></div>
+                <div class="axe-handle"></div>
+            </div>
+            <div class="rescue-people">
+                <div class="person">
+                    <div class="person-head"></div>
+                    <div class="person-body"></div>
+                    <div class="person-legs">
+                        <div class="leg"></div>
+                        <div class="leg"></div>
+                    </div>
+                </div>
+                <div class="person">
+                    <div class="person-head"></div>
+                    <div class="person-body"></div>
+                    <div class="person-legs">
+                        <div class="leg"></div>
+                        <div class="leg"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="hearts">
+                <div class="heart">❤️</div>
+                <div class="heart">💚</div>
+                <div class="heart">🌱</div>
+            </div>
+            <div class="clouds">
+                <div class="cloud cloud1"></div>
+                <div class="cloud cloud2"></div>
+            </div>
+            <div class="birds">
+                <div class="bird">🕊️</div>
+                <div class="bird">🕊️</div>
+                <div class="bird">🕊️</div>
+            </div>
+        </div>
+    </div>
+    <!-- Header Section -->
+    <header class="bg-green-800 text-white shadow-lg relative z-10">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="index.html"
+                    class="text-2xl md:text-3xl font-bold text-green-200 hover:text-green-100 transition duration-300 rounded-md p-2">
+                    Jivan-Jyoti Foundation
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex">
+                    <ul class="flex space-x-6 text-lg">
+                        <li><a href="index.html"
+                                class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Home</a>
+                        </li>
+                        <li><a href="about.html"
+                                class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">About</a>
+                        </li>
+                        <li><a href="team.html"
+                                class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Team</a>
+                        </li>
+                        <li><a href="tree-plantation.html"
+                                class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700 bg-green-700">Tree Plantation</a>
+                        </li>
+                        <li><a href="contact.html"
+                                class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="hamburgerBtn" class="md:hidden focus:outline-none focus:ring-2 focus:ring-green-300 p-2 rounded-md">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center h-96 flex items-center justify-center text-white z-10"
+        style="background-image: url('images/plantation.jpg');">
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="relative z-10 text-center p-6">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">Tree Plantation Initiative</h1>
+            <p class="text-lg sm:text-xl md:text-2xl font-light">Growing a greener tomorrow, one tree at a time</p>
+        </div>
+    </section>
+
+    <!-- Tree Plantation Statistics -->
+    <section class="py-16 bg-green-600 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12">Our Impact in Numbers</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+                <div class="text-center bg-white bg-opacity-20 rounded-lg p-6 backdrop-blur-sm">
+                    <i class="fas fa-tree text-5xl mb-4 text-green-200"></i>
+                    <div class="text-4xl font-bold mb-2" id="total-trees">15,420</div>
+                    <p class="text-lg font-semibold">Trees Planted</p>
+                </div>
+                <div class="text-center bg-white bg-opacity-20 rounded-lg p-6 backdrop-blur-sm">
+                    <i class="fas fa-seedling text-5xl mb-4 text-green-200"></i>
+                    <div class="text-4xl font-bold mb-2" id="saplings-distributed">8,750</div>
+                    <p class="text-lg font-semibold">Saplings Distributed</p>
+                </div>
+                <div class="text-center bg-white bg-opacity-20 rounded-lg p-6 backdrop-blur-sm">
+                    <i class="fas fa-map-marker-alt text-5xl mb-4 text-green-200"></i>
+                    <div class="text-4xl font-bold mb-2" id="locations-covered">45</div>
+                    <p class="text-lg font-semibold">Locations Covered</p>
+                </div>
+                <div class="text-center bg-white bg-opacity-20 rounded-lg p-6 backdrop-blur-sm">
+                    <i class="fas fa-leaf text-5xl mb-4 text-green-200"></i>
+                    <div class="text-4xl font-bold mb-2" id="co2-offset">2,340</div>
+                    <p class="text-lg font-semibold">Tons CO₂ Offset</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tree Plantation Programs -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-green-800 text-center mb-8 sm:mb-12">Our Plantation Programs</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+                <div class="bg-green-50 rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300">
+                    <i class="fas fa-school text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-green-800 mb-4">School Plantation Drive</h3>
+                    <p class="text-gray-700 mb-4">Engaging students in environmental conservation by organizing tree plantation drives in schools and educational institutions.</p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>5,200 trees planted in schools</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>120 schools participated</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>15,000 students involved</li>
+                    </ul>
+                </div>
+                <div class="bg-green-50 rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300">
+                    <i class="fas fa-city text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-green-800 mb-4">Urban Greening</h3>
+                    <p class="text-gray-700 mb-4">Transforming urban spaces by planting trees in parks, roadsides, and community areas to improve air quality.</p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>6,800 trees in urban areas</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>25 parks developed</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>50 km of roadside plantation</li>
+                    </ul>
+                </div>
+                <div class="bg-green-50 rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300">
+                    <i class="fas fa-mountain text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-green-800 mb-4">Forest Restoration</h3>
+                    <p class="text-gray-700 mb-4">Restoring degraded forest areas and creating new forest patches to preserve biodiversity and prevent soil erosion.</p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>3,420 trees in forest areas</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>15 forest patches restored</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>200 hectares covered</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tree Species Information -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-green-800 text-center mb-12">Native Tree Species We Plant</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition duration-300">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-green-100 flex items-center justify-center">
+                        <i class="fas fa-leaf text-3xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-green-800 mb-2">Neem (नीम)</h3>
+                    <p class="text-sm text-gray-600 mb-2">Natural pesticide properties, medicinal uses</p>
+                    <div class="text-xs text-green-600 font-semibold">Scientific: Azadirachta indica</div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition duration-300">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-green-100 flex items-center justify-center">
+                        <i class="fas fa-tree text-3xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-green-800 mb-2">Banyan (बरगद)</h3>
+                    <p class="text-sm text-gray-600 mb-2">Provides extensive shade, oxygen production</p>
+                    <div class="text-xs text-green-600 font-semibold">Scientific: Ficus benghalensis</div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition duration-300">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-green-100 flex items-center justify-center">
+                        <i class="fas fa-seedling text-3xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-green-800 mb-2">Peepal (पीपल)</h3>
+                    <p class="text-sm text-gray-600 mb-2">Sacred tree, excellent air purifier</p>
+                    <div class="text-xs text-green-600 font-semibold">Scientific: Ficus religiosa</div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition duration-300">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-orange-100 flex items-center justify-center">
+                        <i class="fas fa-apple-alt text-3xl text-orange-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-green-800 mb-2">Mango (आम)</h3>
+                    <p class="text-sm text-gray-600 mb-2">Fruit bearing, economic benefits</p>
+                    <div class="text-xs text-green-600 font-semibold">Scientific: Mangifera indica</div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition duration-300">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-yellow-100 flex items-center justify-center">
+                        <i class="fas fa-sun text-3xl text-yellow-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-green-800 mb-2">Gulmohar (गुलमोहर)</h3>
+                    <p class="text-sm text-gray-600 mb-2">Beautiful red flowers, ornamental tree</p>
+                    <div class="text-xs text-green-600 font-semibold">Scientific: Delonix regia</div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition duration-300">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-purple-100 flex items-center justify-center">
+                        <i class="fas fa-flower text-3xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-green-800 mb-2">Jacaranda (जकरांडा)</h3>
+                    <p class="text-sm text-gray-600 mb-2">Purple flowers, fast growing shade tree</p>
+                    <div class="text-xs text-green-600 font-semibold">Scientific: Jacaranda mimosifolia</div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition duration-300">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-brown-100 flex items-center justify-center">
+                        <i class="fas fa-mountain text-3xl text-brown-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-green-800 mb-2">Teak (सागवान)</h3>
+                    <p class="text-sm text-gray-600 mb-2">High quality timber, long-lasting wood</p>
+                    <div class="text-xs text-green-600 font-semibold">Scientific: Tectona grandis</div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition duration-300">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-red-100 flex items-center justify-center">
+                        <i class="fas fa-heart text-3xl text-red-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-green-800 mb-2">Arjun (अर्जुन)</h3>
+                    <p class="text-sm text-gray-600 mb-2">Medicinal bark, heart health benefits</p>
+                    <div class="text-xs text-green-600 font-semibold">Scientific: Terminalia arjuna</div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition duration-300">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-water text-3xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-green-800 mb-2">Jamun (जामुन)</h3>
+                    <p class="text-sm text-gray-600 mb-2">Purple fruit, diabetes control properties</p>
+                    <div class="text-xs text-green-600 font-semibold">Scientific: Syzygium cumini</div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition duration-300">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-green-100 flex items-center justify-center">
+                        <i class="fas fa-spa text-3xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-green-800 mb-2">Ashoka (अशोक)</h3>
+                    <p class="text-sm text-gray-600 mb-2">Sacred tree, beautiful orange flowers</p>
+                    <div class="text-xs text-green-600 font-semibold">Scientific: Saraca asoca</div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition duration-300">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-pink-100 flex items-center justify-center">
+                        <i class="fas fa-cherry-blossom text-3xl text-pink-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-green-800 mb-2">Amaltas (अमलतास)</h3>
+                    <p class="text-sm text-gray-600 mb-2">Golden shower tree, bright yellow flowers</p>
+                    <div class="text-xs text-green-600 font-semibold">Scientific: Cassia fistula</div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition duration-300">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-indigo-100 flex items-center justify-center">
+                        <i class="fas fa-wind text-3xl text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-green-800 mb-2">Eucalyptus (नीलगिरी)</h3>
+                    <p class="text-sm text-gray-600 mb-2">Fast growing, aromatic leaves</p>
+                    <div class="text-xs text-green-600 font-semibold">Scientific: Eucalyptus globulus</div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <div class="bg-green-50 rounded-lg p-6 max-w-4xl mx-auto">
+                    <h3 class="text-2xl font-bold text-green-800 mb-4">Why We Choose Native Species?</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-600 mr-3 text-lg"></i>
+                            <span class="text-gray-700">Better adaptation to local climate and soil</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-600 mr-3 text-lg"></i>
+                            <span class="text-gray-700">Support local wildlife and biodiversity</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-600 mr-3 text-lg"></i>
+                            <span class="text-gray-700">Require less water and maintenance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Involved Section -->
+    <section class="py-16 bg-green-700 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8">Join Our Tree Plantation Mission</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">
+                Be part of the solution! Whether you want to sponsor trees, volunteer for plantation drives, or organize events in your community, we welcome your participation.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="bg-white bg-opacity-20 rounded-lg p-6 backdrop-blur-sm">
+                    <i class="fas fa-hand-holding-usd text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Sponsor Trees</h3>
+                    <p class="mb-4">₹50 per tree including planting and 2-year maintenance</p>
+                    <a href="donate.html?purpose=tree-plantation" class="bg-white text-green-700 px-6 py-2 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
+                        Sponsor Now
+                    </a>
+                </div>
+                <div class="bg-white bg-opacity-20 rounded-lg p-6 backdrop-blur-sm">
+                    <i class="fas fa-users text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Volunteer</h3>
+                    <p class="mb-4">Join our plantation drives and help plant trees in your area</p>
+                    <a href="contact.html?subject=volunteer-plantation" class="bg-white text-green-700 px-6 py-2 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
+                        Join Us
+                    </a>
+                </div>
+                <div class="bg-white bg-opacity-20 rounded-lg p-6 backdrop-blur-sm">
+                    <i class="fas fa-calendar-alt text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Organize Event</h3>
+                    <p class="mb-4">Host a plantation drive in your community or organization</p>
+                    <a href="contact.html?subject=organize-plantation" class="bg-white text-green-700 px-6 py-2 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-gray-300 py-10">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-2xl font-bold text-white mb-4">JivanJyoti Foundation</h3>
+                <p class="text-gray-400">Dedicated to preserving the planet's natural beauty and vital ecosystems for
+                    future generations.</p>
+                <div class="flex space-x-4 mt-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i
+                            class="fab fa-facebook-f text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i
+                            class="fab fa-twitter text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i
+                            class="fab fa-instagram text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i
+                            class="fab fa-linkedin-in text-xl"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="about.html" class="hover:text-white transition duration-300">About Us</a></li>
+                    <li><a href="team.html" class="hover:text-white transition duration-300">Our Team</a></li>
+                    <li><a href="tree-plantation.html" class="hover:text-white transition duration-300">Tree Plantation</a></li>
+                    <li><a href="contact.html" class="hover:text-white transition duration-300">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Legal</h3>
+                <ul class="space-y-2">
+                    <li><a href="privacy.html" class="hover:text-white transition duration-300">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-white transition duration-300">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-10 pt-6">
+            <div class="flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <div class="mb-2 md:mb-0">
+                    &copy; 2025 JivanJyoti Foundation. All rights reserved.
+                </div>
+                <div class="flex items-center space-x-2">
+                    <span>💻 Developed with</span>
+                    <span class="text-red-400">❤️</span>
+                    <span>by</span>
+                    <a href="#" class="text-green-400 hover:text-green-300 font-semibold transition duration-300">
+                        Anurag Sarwade
+                    </a>
+                    <span class="text-gray-600">|</span>
+                    <span class="text-xs text-gray-600">Full Stack Developer</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Navigation Script -->
+    <script src="assets/js/navigation.js"></script>
+    <!-- Chat Widget Script -->
+    <script src="assets/js/chat-widget.js"></script>
+    
+    <!-- Counter Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate counters when page loads
+            animateCounter(document.getElementById('total-trees'), 0, 15420, 2000);
+            animateCounter(document.getElementById('saplings-distributed'), 0, 8750, 2000);
+            animateCounter(document.getElementById('locations-covered'), 0, 45, 2000);
+            animateCounter(document.getElementById('co2-offset'), 0, 2340, 2000);
+        });
+
+        function animateCounter(element, start, end, duration) {
+            const startTime = Date.now();
+            const animate = () => {
+                const elapsed = Date.now() - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const current = Math.floor(start + (end - start) * progress);
+                
+                element.textContent = current.toLocaleString();
+                
+                if (progress < 1) {
+                    requestAnimationFrame(animate);
+                }
+            };
+            animate();
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-gray-300 py-10">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-2xl font-bold text-white mb-4">JivanJyoti Foundation</h3>
+                <p class="text-gray-400">Dedicated to preserving the planet's natural beauty and vital ecosystems for
+                    future generations.</p>
+                <div class="flex space-x-4 mt-6">
+                    <a href="<%= config.social.facebook %>" class="text-gray-400 hover:text-white transition duration-300"><i
+                            class="fab fa-facebook-f text-xl"></i></a>
+                    <a href="<%= config.social.twitter %>" class="text-gray-400 hover:text-white transition duration-300"><i
+                            class="fab fa-twitter text-xl"></i></a>
+                    <a href="<%= config.social.instagram %>" class="text-gray-400 hover:text-white transition duration-300"><i
+                            class="fab fa-instagram text-xl"></i></a>
+                    <a href="<%= config.social.linkedin %>" class="text-gray-400 hover:text-white transition duration-300"><i
+                            class="fab fa-linkedin-in text-xl"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="/about" class="hover:text-white transition duration-300">About Us</a></li>
+                    <li><a href="/team" class="hover:text-white transition duration-300">Our Team</a></li>
+                    <li><a href="/projects" class="hover:text-white transition duration-300">Projects</a></li>
+                    <li><a href="/news" class="hover:text-white transition duration-300">News</a></li>
+                    <li><a href="/donate" class="hover:text-white transition duration-300">Donate</a></li>
+                    <li><a href="/contact" class="hover:text-white transition duration-300">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Legal</h3>
+                <ul class="space-y-2">
+                    <li><a href="/privacy" class="hover:text-white transition duration-300">Privacy Policy</a></li>
+                    <li><a href="/terms" class="hover:text-white transition duration-300">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500">
+            &copy; <%= new Date().getFullYear() %> JivanJyoti Foundation. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Navigation Script -->
+    <script src="/assets/js/navigation.js"></script>
+    <!-- Main JavaScript file -->
+    <script src="/assets/js/script.js" defer type="module"></script>
+    <!-- Authentication System -->
+    <script src="/assets/js/auth.js" defer></script>
+</body>
+
+</html>

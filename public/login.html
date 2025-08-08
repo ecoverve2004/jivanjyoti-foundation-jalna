@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="yuB84mu_L05PDvJ5M36dWrDtpUPWU6kCI5Nd-nI4A4M" />
+    <meta name="msvalidate.01" content="6806C52ECE736A948EFF4C3451B923BE" />
+    <title>Login / Register - Jivan-Jyoti Foundation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Google Sign-In -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    
+    <!-- Facebook SDK -->
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+    
+    <!-- LinkedIn SDK -->
+    <script type="text/javascript" src="https://platform.linkedin.com/in.js">
+        api_key: your_linkedin_api_key
+        authorize: true
+    </script>
+</head>
+
+<body class="font-inter bg-gray-50 text-gray-800">
+    <!-- Header Section -->
+    <header class="bg-green-800 text-white shadow-lg">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="index.html"
+                    class="text-2xl md:text-3xl font-bold text-green-200 hover:text-green-100 transition duration-300 rounded-md p-2">
+                    Jivan-Jyoti Foundation
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex">
+                    <ul class="flex space-x-6 text-lg">
+                        <li><a href="index.html"
+                                class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Home</a>
+                        </li>
+                        <li><a href="about.html"
+                                class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">About
+                                Us</a></li>
+                        <li><a href="team.html"
+                                class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Our                                Team</a></li>
+                        <li><a href="donate.html"
+                                class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Donate</a>
+                        </li>
+                        <li><a href="contact.html"
+                                class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Contact</a>
+                        </li>
+                        <li><a href="login.html"
+                                class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700 bg-green-700">Login</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="hamburgerBtn" class="md:hidden focus:outline-none focus:ring-2 focus:ring-green-300 p-2 rounded-md">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="mobile-menu-hidden md:hidden bg-green-800 mt-4 mobile-menu-container">
+                <div class="py-2">
+                    <a href="index.html" class="mobile-nav-link">
+                        <i class="fas fa-home mr-2"></i>Home
+                    </a>
+                    <a href="about.html" class="mobile-nav-link">
+                        <i class="fas fa-info-circle mr-2"></i>About Us
+                    </a>
+                    <a href="team.html" class="mobile-nav-link">
+                        <i class="fas fa-users mr-2"></i>Our Team
+                    </a>
+                    <a href="donate.html" class="mobile-nav-link">
+                        <i class="fas fa-heart mr-2"></i>Donate
+                    </a>
+                    <a href="contact.html" class="mobile-nav-link">
+                        <i class="fas fa-envelope mr-2"></i>Contact
+                    </a>
+                    <a href="login.html" class="mobile-nav-link bg-green-700">
+                        <i class="fas fa-sign-in-alt mr-2"></i>Login
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobileMenuOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden"></div>
+    </header>
+
+    <!-- Login/Register Hero Section -->
+    <section class="relative bg-cover bg-center h-64 flex items-center justify-center text-white"
+        style="background-image: url('images/tree.jpeg');">
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="relative z-10 text-center">
+            <h1 class="text-5xl font-bold">Join Our Community</h1>
+            <p class="text-xl mt-2">Sign in or create an account to get involved.</p>
+        </div>
+    </section>
+
+    <!-- Login/Register Forms Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-md mx-auto bg-green-50 p-8 rounded-lg shadow-xl border border-green-200">
+                <div class="flex justify-center mb-8">
+                    <button id="showLoginBtn"
+                        class="px-6 py-3 text-lg font-semibold rounded-l-lg bg-green-600 text-white shadow-md transition duration-300">Login</button>
+                    <button id="showRegisterBtn"
+                        class="px-6 py-3 text-lg font-semibold rounded-r-lg bg-gray-200 text-gray-700 hover:bg-gray-300 transition duration-300">Register</button>
+                </div>
+
+                <!-- Login Form -->
+                <form id="loginForm" class="space-y-6">
+                    <h2 class="text-3xl font-bold text-green-800 mb-6 text-center">Login to Your Account</h2>
+                    <div>
+                        <label for="loginEmail" class="block text-lg font-medium text-gray-700 mb-2">Email
+                            Address</label>
+                        <input type="email" id="loginEmail" name="loginEmail" required
+                            class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-lg">
+                        <p id="loginEmailError" class="text-red-500 text-sm mt-1 hidden">Please enter a valid email
+                            address.</p>
+                    </div>
+                    <div>
+                        <label for="loginPassword" class="block text-lg font-medium text-gray-700 mb-2">Password</label>
+                        <input type="password" id="loginPassword" name="loginPassword" required
+                            class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-lg">
+                        <p id="loginPasswordError" class="text-red-500 text-sm mt-1 hidden">Password cannot be empty.
+                        </p>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-md text-xl transition duration-300 transform hover:scale-105 shadow-lg">
+                        Login <i class="fas fa-sign-in-alt ml-2"></i>
+                    </button>
+                    <p id="loginMessage" class="mt-4 text-center text-red-500 hidden"></p>
+                </form>
+
+                <!-- Register Form -->
+                <form id="registerForm" class="space-y-6 hidden">
+                    <h2 class="text-3xl font-bold text-green-800 mb-6 text-center">Create a New Account</h2>
+                    <div>
+                        <label for="firstName" class="block text-lg font-medium text-gray-700 mb-2">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required
+                            class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-lg">
+                    </div>
+                    <div>
+                        <label for="lastName" class="block text-lg font-medium text-gray-700 mb-2">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required
+                            class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-lg">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-lg font-medium text-gray-700 mb-2">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}"
+                            class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-lg">
+                    </div>
+                    <div>
+                        <label for="registerEmail" class="block text-lg font-medium text-gray-700 mb-2">Email
+                            Address</label>
+                        <input type="email" id="registerEmail" name="registerEmail" required
+                            class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-lg">
+                        <p id="registerEmailError" class="text-red-500 text-sm mt-1 hidden">Please enter a valid email
+                            address.</p>
+                    </div>
+                    <div>
+                        <label for="registerPassword"
+                            class="block text-lg font-medium text-gray-700 mb-2">Password</label>
+                        <input type="password" id="registerPassword" name="registerPassword" required
+                            class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-lg">
+                        <p id="registerPasswordError" class="text-red-500 text-sm mt-1 hidden">Password must be at least
+                            6 characters.</p>
+                    </div>
+                    <div>
+                        <label for="confirmPassword" class="block text-lg font-medium text-gray-700 mb-2">Confirm
+                            Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required
+                            class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-lg">
+                        <p id="confirmPasswordError" class="text-red-500 text-sm mt-1 hidden">Passwords do not match.
+                        </p>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-md text-xl transition duration-300 transform hover:scale-105 shadow-lg">
+                        Register <i class="fas fa-user-plus ml-2"></i>
+                    </button>
+                    <div class="flex items-start mt-2">
+                        <input id="terms" name="terms" type="checkbox" required
+                            class="h-5 w-5 text-green-600 focus:ring-green-500 border-gray-300 rounded mt-1">
+                        <label for="terms" class="ml-3 text-sm text-gray-700">I agree to the <a href="terms.html" class="text-green-600 underline">Terms &amp; Conditions</a></label>
+                    </div>
+                    <p class="text-sm text-gray-600 text-center">Already have an account?
+                        <a id="switchToLogin" href="#" class="text-green-600 font-semibold hover:underline">Sign in</a>
+                    </p>
+                    <p id="registerMessage" class="mt-4 text-center text-red-500 hidden"></p>
+                </form>
+
+                <div id="loggedInUserDisplay" class="hidden mt-6 text-center">
+                    <p class="text-lg text-green-700">Welcome, <span id="userEmailDisplay"
+                            class="font-semibold"></span>!</p>
+                    <p class="text-sm text-gray-600">Your User ID: <span id="userIdDisplay"
+                            class="font-mono text-xs break-all"></span></p>
+                    <button id="logoutBtn"
+                        class="mt-4 bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-5 rounded-md text-lg transition duration-300 shadow-lg">
+                        Logout <i class="fas fa-sign-out-alt ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-gray-300 py-10">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-2xl font-bold text-white mb-4">JivanJyoti Foundation</h3>
+                <p class="text-gray-400">Dedicated to preserving the planet's natural beauty and vital ecosystems for
+                    future generations.</p>
+                <div class="flex space-x-4 mt-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i
+                            class="fab fa-facebook-f text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i
+                            class="fab fa-twitter text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i
+                            class="fab fa-instagram text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i
+                            class="fab fa-linkedin-in text-xl"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="about.html" class="hover:text-white transition duration-300">About Us</a></li>
+                    <li><a href="team.html" class="hover:text-white transition duration-300">Our Team</a></li>
+                    <li><a href="donate.html" class="hover:text-white transition duration-300">Donate</a></li>
+                    <li><a href="contact.html" class="hover:text-white transition duration-300">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Legal</h3>
+                <ul class="space-y-2">
+                    <li><a href="privacy.html" class="hover:text-white transition duration-300">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-white transition duration-300">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-10 pt-6">
+            <div class="flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <div class="mb-2 md:mb-0">
+                    &copy; 2025 JivanJyoti Foundation. All rights reserved.
+                </div>
+                <div class="flex items-center space-x-2">
+                    <span>💻 Developed with</span>
+                    <span class="text-red-400">❤️</span>
+                    <span>by</span>
+                    <a href="#" class="text-green-400 hover:text-green-300 font-semibold transition duration-300">
+                        Anurag Sarwade
+                    </a>
+                    <span class="text-gray-600">|</span>
+                    <span class="text-xs text-gray-600">Full Stack Developer</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/data-manager.js"></script>
+    <script src="assets/js/backend.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/login.js"></script>
+    
+    <!-- Login Page Script -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Listen for authentication events
+        document.addEventListener('auth:login', function(e) {
+            showSuccess('Successfully logged in!');
+            setTimeout(() => {
+                showUserDashboard(e.detail);
+            }, 1000);
+        });
+
+        document.addEventListener('auth:register', function(e) {
+            showSuccess('Account created successfully!');
+            setTimeout(() => {
+                showUserDashboard(e.detail);
+            }, 1000);
+        });
+
+        document.addEventListener('auth:socialLogin', function(e) {
+            showSuccess(`Successfully signed in with ${e.detail.provider}!`);
+            setTimeout(() => {
+                showUserDashboard(e.detail.user);
+            }, 1000);
+        });
+
+        document.addEventListener('auth:error', function(e) {
+            showError(e.detail.message);
+        });
+
+        document.addEventListener('auth:logout', function(e) {
+            hideUserDashboard();
+            showSuccess('Successfully logged out!');
+        });
+
+        // Form switching
+        document.getElementById('loginTab').addEventListener('click', () => switchTab('login'));
+        document.getElementById('registerTab').addEventListener('click', () => switchTab('register'));
+        document.getElementById('switchToRegister').addEventListener('click', (e) => {
+            e.preventDefault();
+            switchTab('register');
+        });
+        document.getElementById('switchToLogin').addEventListener('click', (e) => {
+            e.preventDefault();
+            switchTab('login');
+        });
+
+        // Password visibility toggle
+        document.getElementById('toggleLoginPassword').addEventListener('click', () => 
+            togglePassword('loginPassword', 'toggleLoginPassword'));
+        document.getElementById('toggleRegisterPassword').addEventListener('click', () => 
+            togglePassword('registerPassword', 'toggleRegisterPassword'));
+
+        // Password strength indicator
+        document.getElementById('registerPassword').addEventListener('input', updatePasswordStrength);
+
+        // Forgot password modal
+        document.getElementById('forgotPassword').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('forgotPasswordModal').classList.remove('hidden');
+        });
+
+        document.getElementById('closeForgotModal').addEventListener('click', () => {
+            document.getElementById('forgotPasswordModal').classList.add('hidden');
+        });
+
+        // Dashboard controls
+        document.getElementById('continueToDashboard').addEventListener('click', () => {
+            hideUserDashboard();
+            window.location.href = 'index.html';
+        });
+
+        document.getElementById('logoutUser').addEventListener('click', () => {
+            auth.logout();
+        });
+
+        // Forgot password form
+        document.getElementById('forgotPasswordForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('forgotEmail').value;
+            
+            if (auth.validateEmail(email)) {
+                try {
+                    auth.requestPasswordReset(email);
+                    showSuccess('Password reset link sent to your email!');
+                    document.getElementById('forgotPasswordModal').classList.add('hidden');
+                } catch (error) {
+                    showError(error.message);
+                }
+            } else {
+                showError('Please enter a valid email address');
+            }
+        });
+
+        // Check if user is already logged in
+        if (auth.isLoggedIn()) {
+            showUserDashboard(auth.getCurrentUser());
+        }
+    });
+
+    function switchTab(tab) {
+        const loginTab = document.getElementById('loginTab');
+        const registerTab = document.getElementById('registerTab');
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+
+        if (tab === 'login') {
+            loginTab.classList.add('bg-white', 'text-green-600', 'shadow-sm');
+            loginTab.classList.remove('text-gray-600');
+            registerTab.classList.remove('bg-white', 'text-green-600', 'shadow-sm');
+            registerTab.classList.add('text-gray-600');
+            loginForm.classList.remove('hidden');
+            registerForm.classList.add('hidden');
+        } else {
+            registerTab.classList.add('bg-white', 'text-green-600', 'shadow-sm');
+            registerTab.classList.remove('text-gray-600');
+            loginTab.classList.remove('bg-white', 'text-green-600', 'shadow-sm');
+            loginTab.classList.add('text-gray-600');
+            registerForm.classList.remove('hidden');
+            loginForm.classList.add('hidden');
+        }
+    }
+
+    function togglePassword(inputId, buttonId) {
+        const input = document.getElementById(inputId);
+        const button = document.getElementById(buttonId);
+        const icon = button.querySelector('i');
+
+        if (input.type === 'password') {
+            input.type = 'text';
+            icon.classList.remove('fa-eye');
+            icon.classList.add('fa-eye-slash');
+        } else {
+            input.type = 'password';
+            icon.classList.remove('fa-eye-slash');
+            icon.classList.add('fa-eye');
+        }
+    }
+
+    function updatePasswordStrength() {
+        const password = document.getElementById('registerPassword').value;
+        const strengthText = document.getElementById('passwordStrength');
+        const strengthBar = document.getElementById('passwordStrengthBar');
+        
+        const strength = auth.calculatePasswordStrength(password);
+        let strengthLabel = 'Weak';
+        let strengthColor = 'bg-red-400';
+        
+        if (strength >= 4) {
+            strengthLabel = 'Strong';
+            strengthColor = 'bg-green-400';
+        } else if (strength >= 2) {
+            strengthLabel = 'Medium';
+            strengthColor = 'bg-yellow-400';
+        }
+        
+        strengthText.textContent = strengthLabel;
+        strengthBar.className = `h-1 rounded-full transition-all duration-300 ${strengthColor}`;
+        strengthBar.style.width = `${(strength / 5) * 100}%`;
+    }
+
+    function showUserDashboard(user) {
+        document.getElementById('userDisplayName').textContent = user.name || 'User';
+        document.getElementById('userDisplayEmail').textContent = user.email || '';
+        document.getElementById('userLoginMethod').textContent = user.socialAccounts ? 
+            Object.keys(user.socialAccounts)[0].charAt(0).toUpperCase() + 
+            Object.keys(user.socialAccounts)[0].slice(1) : 'Email';
+        
+        document.getElementById('userDashboard').classList.remove('hidden');
+    }
+
+    function hideUserDashboard() {
+        document.getElementById('userDashboard').classList.add('hidden');
+        // Reset forms
+        document.getElementById('emailLoginForm').reset();
+        document.getElementById('emailRegisterForm').reset();
+    }
+
+    function showSuccess(message) {
+        document.getElementById('successText').textContent = message;
+        document.getElementById('successMessage').classList.remove('hidden');
+        document.getElementById('errorMessage').classList.add('hidden');
+        
+        setTimeout(() => {
+            document.getElementById('successMessage').classList.add('hidden');
+        }, 5000);
+    }
+
+    function showError(message) {
+        document.getElementById('errorText').textContent = message;
+        document.getElementById('errorMessage').classList.remove('hidden');
+        document.getElementById('successMessage').classList.add('hidden');
+        
+        setTimeout(() => {
+            document.getElementById('errorMessage').classList.add('hidden');
+        }, 5000);
+    }
+
+    // Close modals when clicking outside
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('fixed') && e.target.classList.contains('inset-0')) {
+            const modals = ['forgotPasswordModal', 'userDashboard'];
+            modals.forEach(modalId => {
+                document.getElementById(modalId).classList.add('hidden');
+            });
+        }
+    });
+    </script>
+</body>
+
+</html>

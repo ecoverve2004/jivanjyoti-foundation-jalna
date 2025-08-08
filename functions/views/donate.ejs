@@ -1,0 +1,209 @@
+<%- include('partials/header') %>
+
+<!-- Donate Hero Section -->
+<section class="relative bg-cover bg-center h-64 flex items-center justify-center text-white"
+    style="background-image: url('/images/plant.jpeg');">
+    <div class="absolute inset-0 bg-black opacity-60"></div>
+    <div class="relative z-10 text-center">
+        <h1 class="text-5xl font-bold">Your Donation Makes a Difference</h1>
+        <p class="text-xl mt-2">Every contribution helps us protect our planet.</p>
+    </div>
+</section>
+
+<!-- Impact Statistics -->
+<section class="py-16 bg-green-700 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-8">Your Impact</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="p-6">
+                <div class="text-5xl font-bold mb-2">₹500</div>
+                <p class="text-lg">Plants 10 saplings</p>
+            </div>
+            <div class="p-6">
+                <div class="text-5xl font-bold mb-2">₹1000</div>
+                <p class="text-lg">Protects 1 sq meter of forest</p>
+            </div>
+            <div class="p-6">
+                <div class="text-5xl font-bold mb-2">₹2500</div>
+                <p class="text-lg">Educates 50 children</p>
+            </div>
+            <div class="p-6">
+                <div class="text-5xl font-bold mb-2">₹5000</div>
+                <p class="text-lg">Sponsors community program</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Donation Form Section -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="max-w-2xl mx-auto bg-green-50 p-8 rounded-lg shadow-xl border border-green-200">
+            <h2 class="text-3xl font-bold text-green-800 mb-6 text-center">Make a Donation</h2>
+            <p class="text-center text-gray-700 mb-8">Your generosity fuels our reforestation, conservation, and
+                education programs. Thank you for your support!</p>
+
+            <!-- Quick Amount Selection -->
+            <div class="mb-6">
+                <label class="block text-lg font-medium text-gray-700 mb-4">Choose Amount</label>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+                    <button type="button" class="amount-btn bg-white border-2 border-green-300 text-green-700 font-semibold py-3 px-4 rounded-md hover:bg-green-100 transition duration-300" data-amount="500">₹500</button>
+                    <button type="button" class="amount-btn bg-white border-2 border-green-300 text-green-700 font-semibold py-3 px-4 rounded-md hover:bg-green-100 transition duration-300" data-amount="1000">₹1000</button>
+                    <button type="button" class="amount-btn bg-white border-2 border-green-300 text-green-700 font-semibold py-3 px-4 rounded-md hover:bg-green-100 transition duration-300" data-amount="2500">₹2500</button>
+                    <button type="button" class="amount-btn bg-white border-2 border-green-300 text-green-700 font-semibold py-3 px-4 rounded-md hover:bg-green-100 transition duration-300" data-amount="5000">₹5000</button>
+                </div>
+            </div>
+
+            <form id="donationForm" class="space-y-6">
+                <div>
+                    <label for="amount" class="block text-lg font-medium text-gray-700 mb-2">Donation Amount (₹)</label>
+                    <input type="number" id="amount" name="amount" min="1" required
+                        class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-lg">
+                    <p id="amountError" class="text-red-500 text-sm mt-1 hidden">Please enter a valid donation amount.</p>
+                </div>
+
+                <div>
+                    <label for="name" class="block text-lg font-medium text-gray-700 mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" required
+                        class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-lg">
+                    <p id="nameError" class="text-red-500 text-sm mt-1 hidden">Please enter your full name.</p>
+                </div>
+
+                <div>
+                    <label for="email" class="block text-lg font-medium text-gray-700 mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" required
+                        class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-lg">
+                    <p id="emailError" class="text-red-500 text-sm mt-1 hidden">Please enter a valid email address.</p>
+                </div>
+
+                <div>
+                    <label for="phone" class="block text-lg font-medium text-gray-700 mb-2">Phone Number</label>
+                    <input type="tel" id="phone" name="phone"
+                        class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-lg">
+                </div>
+
+                <div class="flex items-center">
+                    <input id="anonymous" name="anonymous" type="checkbox"
+                        class="h-5 w-5 text-green-600 focus:ring-green-500 border-gray-300 rounded">
+                    <label for="anonymous" class="ml-2 block text-md text-gray-900">Donate Anonymously</label>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-md text-xl transition duration-300 transform hover:scale-105 shadow-lg">
+                    Donate Now <i class="fas fa-heart ml-2"></i>
+                </button>
+
+                <div id="donationSuccessMessage"
+                    class="hidden mt-4 p-4 bg-green-100 text-green-800 rounded-md border border-green-300 text-center">
+                    Thank you for your generous donation! Your support makes a real difference.
+                </div>
+                <div id="donationErrorMessage"
+                    class="hidden mt-4 p-4 bg-red-100 text-red-800 rounded-md border border-red-300 text-center">
+                    There was an error processing your donation. Please try again later.
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Other Ways to Help -->
+<section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold text-green-800 mb-8">Other Ways to Support</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <i class="fas fa-calendar-alt text-5xl text-blue-500 mb-4"></i>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Monthly Giving</h3>
+                <p class="text-gray-600 mb-6">Join our sustaining donors with a monthly contribution</p>
+                <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition duration-300">
+                    Set Up Monthly Gift
+                </a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <i class="fas fa-users text-5xl text-purple-500 mb-4"></i>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Corporate Partnership</h3>
+                <p class="text-gray-600 mb-6">Partner with us for CSR initiatives and sustainability programs</p>
+                <a href="/contact" class="bg-purple-600 text-white px-6 py-2 rounded-md hover:bg-purple-700 transition duration-300">
+                    Learn More
+                </a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <i class="fas fa-hand-holding-heart text-5xl text-red-500 mb-4"></i>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Volunteer</h3>
+                <p class="text-gray-600 mb-6">Contribute your time and skills to our conservation efforts</p>
+                <a href="/contact" class="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700 transition duration-300">
+                    Get Involved
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+// Quick amount selection functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const amountButtons = document.querySelectorAll('.amount-btn');
+    const amountInput = document.getElementById('amount');
+    const donationForm = document.getElementById('donationForm');
+    const successMessage = document.getElementById('donationSuccessMessage');
+    const errorMessage = document.getElementById('donationErrorMessage');
+
+    // Amount button handlers
+    amountButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            amountButtons.forEach(btn => {
+                btn.classList.remove('bg-green-600', 'text-white');
+                btn.classList.add('bg-white', 'text-green-700');
+            });
+            
+            // Add active class to clicked button
+            this.classList.remove('bg-white', 'text-green-700');
+            this.classList.add('bg-green-600', 'text-white');
+            
+            // Set amount in input
+            amountInput.value = this.dataset.amount;
+        });
+    });
+
+    // Donation form handler
+    donationForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(donationForm);
+        const data = Object.fromEntries(formData);
+        
+        try {
+            const response = await fetch('/donate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                successMessage.classList.remove('hidden');
+                errorMessage.classList.add('hidden');
+                donationForm.reset();
+                
+                // Reset amount buttons
+                amountButtons.forEach(btn => {
+                    btn.classList.remove('bg-green-600', 'text-white');
+                    btn.classList.add('bg-white', 'text-green-700');
+                });
+            } else {
+                throw new Error(result.message);
+            }
+        } catch (error) {
+            errorMessage.textContent = error.message || 'There was an error processing your donation. Please try again later.';
+            errorMessage.classList.remove('hidden');
+            successMessage.classList.add('hidden');
+        }
+    });
+});
+</script>
+
+<%- include('partials/footer') %>

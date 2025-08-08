@@ -1,0 +1,239 @@
+<%- include('partials/header') %>
+
+<!-- Login Hero Section -->
+<section class="relative bg-cover bg-center h-64 flex items-center justify-center text-white"
+    style="background-image: url('/images/bg.jpg');">
+    <div class="absolute inset-0 bg-black opacity-60"></div>
+    <div class="relative z-10 text-center">
+        <h1 class="text-4xl font-bold">Welcome Back</h1>
+        <p class="text-xl mt-2">Sign in to your account</p>
+    </div>
+</section>
+
+<!-- Login Form Section -->
+<section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4 max-w-md">
+        <div class="bg-white p-8 rounded-lg shadow-xl">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-green-800">Login</h2>
+                <p class="text-gray-600 mt-2">Access your JivanJyoti Foundation account</p>
+            </div>
+
+            <!-- Login Tabs -->
+            <div class="flex mb-6 bg-gray-100 rounded-lg p-1">
+                <button id="emailLoginTab" class="flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors tab-button active">
+                    Email Login
+                </button>
+                <button id="socialLoginTab" class="flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors tab-button">
+                    Social Login
+                </button>
+            </div>
+
+            <!-- Email Login Form -->
+            <div id="emailLoginSection" class="login-section">
+                <form id="emailLoginForm" class="space-y-6">
+                    <div>
+                        <label for="loginEmail" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                        <input type="email" id="loginEmail" name="loginEmail" required
+                            class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500">
+                    </div>
+                    
+                    <div>
+                        <label for="loginPassword" class="block text-sm font-medium text-gray-700 mb-2">Password</label>
+                        <input type="password" id="loginPassword" name="loginPassword" required
+                            class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500">
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <input id="rememberMe" name="rememberMe" type="checkbox"
+                                class="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded">
+                            <label for="rememberMe" class="ml-2 block text-sm text-gray-900">Remember me</label>
+                        </div>
+                        <a href="#" class="text-sm text-green-600 hover:text-green-800">Forgot password?</a>
+                    </div>
+                    
+                    <button type="submit"
+                        class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-md transition duration-300">
+                        Sign In
+                    </button>
+                </form>
+            </div>
+
+            <!-- Social Login Section -->
+            <div id="socialLoginSection" class="login-section hidden">
+                <div class="space-y-4">
+                    <button data-social-login="google"
+                        class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-md transition duration-300 flex items-center justify-center">
+                        <i class="fab fa-google mr-2"></i> Continue with Google
+                    </button>
+                    
+                    <button data-social-login="facebook"
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-md transition duration-300 flex items-center justify-center">
+                        <i class="fab fa-facebook-f mr-2"></i> Continue with Facebook
+                    </button>
+                    
+                    <button data-social-login="twitter"
+                        class="w-full bg-blue-400 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-md transition duration-300 flex items-center justify-center">
+                        <i class="fab fa-twitter mr-2"></i> Continue with Twitter
+                    </button>
+                    
+                    <button data-social-login="linkedin"
+                        class="w-full bg-blue-800 hover:bg-blue-900 text-white font-bold py-3 px-6 rounded-md transition duration-300 flex items-center justify-center">
+                        <i class="fab fa-linkedin-in mr-2"></i> Continue with LinkedIn
+                    </button>
+                </div>
+            </div>
+
+            <!-- Register Link -->
+            <div class="mt-6 text-center">
+                <p class="text-sm text-gray-600">
+                    Don't have an account? 
+                    <button id="showRegisterForm" class="text-green-600 hover:text-green-800 font-medium">Sign up</button>
+                </p>
+            </div>
+        </div>
+
+        <!-- Registration Form (Hidden by default) -->
+        <div id="registerFormSection" class="bg-white p-8 rounded-lg shadow-xl mt-8 hidden">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-green-800">Create Account</h2>
+                <p class="text-gray-600 mt-2">Join the JivanJyoti Foundation community</p>
+            </div>
+
+            <form id="emailRegisterForm" class="space-y-6">
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required
+                            class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500">
+                    </div>
+                    <div>
+                        <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required
+                            class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500">
+                    </div>
+                </div>
+                
+                <div>
+                    <label for="registerEmail" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                    <input type="email" id="registerEmail" name="registerEmail" required
+                        class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500">
+                </div>
+                
+                <div>
+                    <label for="registerPassword" class="block text-sm font-medium text-gray-700 mb-2">Password</label>
+                    <input type="password" id="registerPassword" name="registerPassword" required
+                        class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500">
+                    <div id="passwordStrength" class="mt-2 text-sm text-gray-500"></div>
+                </div>
+                
+                <div>
+                    <label for="confirmPassword" class="block text-sm font-medium text-gray-700 mb-2">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required
+                        class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500">
+                </div>
+                
+                <button type="submit"
+                    class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-md transition duration-300">
+                    Create Account
+                </button>
+            </form>
+
+            <div class="mt-6 text-center">
+                <p class="text-sm text-gray-600">
+                    Already have an account? 
+                    <button id="showLoginForm" class="text-green-600 hover:text-green-800 font-medium">Sign in</button>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Success/Error Messages -->
+<div id="authMessages" class="fixed top-4 right-4 z-50"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Tab switching
+    const emailTab = document.getElementById('emailLoginTab');
+    const socialTab = document.getElementById('socialLoginTab');
+    const emailSection = document.getElementById('emailLoginSection');
+    const socialSection = document.getElementById('socialLoginSection');
+    
+    emailTab.addEventListener('click', () => {
+        emailTab.classList.add('active');
+        socialTab.classList.remove('active');
+        emailSection.classList.remove('hidden');
+        socialSection.classList.add('hidden');
+    });
+    
+    socialTab.addEventListener('click', () => {
+        socialTab.classList.add('active');
+        emailTab.classList.remove('active');
+        socialSection.classList.remove('hidden');
+        emailSection.classList.add('hidden');
+    });
+    
+    // Form switching
+    const showRegisterBtn = document.getElementById('showRegisterForm');
+    const showLoginBtn = document.getElementById('showLoginForm');
+    const registerSection = document.getElementById('registerFormSection');
+    
+    showRegisterBtn.addEventListener('click', () => {
+        registerSection.classList.remove('hidden');
+    });
+    
+    showLoginBtn.addEventListener('click', () => {
+        registerSection.classList.add('hidden');
+    });
+
+    // Initialize authentication system
+    if (typeof AuthSystem !== 'undefined') {
+        window.authSystem = new AuthSystem();
+        
+        // Listen for auth events
+        document.addEventListener('auth:login', (e) => {
+            showMessage('Login successful! Welcome back.', 'success');
+            setTimeout(() => window.location.href = '/', 1500);
+        });
+        
+        document.addEventListener('auth:register', (e) => {
+            showMessage('Account created successfully! Welcome to JivanJyoti Foundation.', 'success');
+            setTimeout(() => window.location.href = '/', 1500);
+        });
+        
+        document.addEventListener('auth:socialLogin', (e) => {
+            showMessage(`${e.detail.provider} login successful!`, 'success');
+            setTimeout(() => window.location.href = '/', 1500);
+        });
+        
+        document.addEventListener('auth:error', (e) => {
+            showMessage(e.detail.message, 'error');
+        });
+    }
+});
+
+function showMessage(message, type) {
+    const messagesContainer = document.getElementById('authMessages');
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `p-4 rounded-md mb-2 ${type === 'success' ? 'bg-green-100 text-green-800 border border-green-300' : 'bg-red-100 text-red-800 border border-red-300'}`;
+    messageDiv.textContent = message;
+    
+    messagesContainer.appendChild(messageDiv);
+    
+    setTimeout(() => {
+        messageDiv.remove();
+    }, 5000);
+}
+</script>
+
+<style>
+.tab-button.active {
+    background-color: white;
+    color: #059669;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+</style>
+
+<%- include('partials/footer') %>
