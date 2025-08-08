@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="yuB84mu_L05PDvJ5M36dWrDtpUPWU6kCI5Nd-nI4A4M" />
+    <meta name="msvalidate.01" content="6806C52ECE736A948EFF4C3451B923BE" />
+    <title>Blog & Resources - Jivan-Jyoti Foundation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-inter bg-gray-50 text-gray-800">
+
+<!-- Header Section -->
+<header class="bg-green-800 text-white shadow-lg">
+    <nav class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="text-2xl md:text-3xl font-bold text-green-200 hover:text-green-100 transition duration-300 rounded-md p-2">
+                Jivan-Jyoti Foundation
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex">
+                <ul class="flex space-x-6 text-lg">
+                    <li><a href="index.html" class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Home</a></li>
+                    <li><a href="about.html" class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">About</a></li>
+                    <li><a href="programs.html" class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Programs</a></li>
+                    <li><a href="team.html" class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Team</a></li>
+                    <li><a href="gallery.html" class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Gallery</a></li>
+                    <li><a href="blog.html" class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700 bg-green-700">Blog</a></li>
+                    <li><a href="contact.html" class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Contact</a></li>
+                    <li><a href="login.html" class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700">Login</a></li>
+                </ul>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="hamburgerBtn" class="md:hidden focus:outline-none focus:ring-2 focus:ring-green-300 p-2 rounded-md">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="mobile-menu-hidden md:hidden bg-green-800 mt-4 mobile-menu-container">
+            <div class="py-2">
+                <a href="index.html" class="mobile-nav-link"><i class="fas fa-home mr-2"></i>Home</a>
+                <a href="about.html" class="mobile-nav-link"><i class="fas fa-info-circle mr-2"></i>About</a>
+                <a href="programs.html" class="mobile-nav-link"><i class="fas fa-tasks mr-2"></i>Programs</a>
+                <a href="team.html" class="mobile-nav-link"><i class="fas fa-users mr-2"></i>Team</a>
+                <a href="gallery.html" class="mobile-nav-link"><i class="fas fa-images mr-2"></i>Gallery</a>
+                <a href="blog.html" class="mobile-nav-link"><i class="fas fa-blog mr-2"></i>Blog</a>
+                <a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope mr-2"></i>Contact</a>
+                <a href="login.html" class="mobile-nav-link"><i class="fas fa-sign-in-alt mr-2"></i>Login</a>
+            </div>
+        </div>
+    </nav>
+    <div id="mobileMenuOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden"></div>
+</header>
+
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-green-600 to-blue-600 text-white py-20">
+    <div class="container mx-auto px-4">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-down">Blog & Resources</h1>
+            <p class="text-xl md:text-2xl mb-8 animate-fade-in-up">Insights, Tips, and Knowledge for Environmental Conservation</p>
+            <div class="flex justify-center">
+                <a href="#blog-content" class="bg-white text-green-600 font-bold py-3 px-8 rounded-full text-lg hover:bg-green-50 transition duration-300 animate-bounce-once">
+                    <i class="fas fa-arrow-down mr-2"></i>Explore Content
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Categories -->
+<section class="py-8 bg-white shadow-sm">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-center gap-4">
+            <button onclick="filterContent('all')" class="category-btn bg-green-600 text-white px-6 py-2 rounded-full font-medium hover:bg-green-700 transition duration-300" data-category="all">
+                All Content
+            </button>
+            <button onclick="filterContent('guides')" class="category-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium hover:bg-green-600 hover:text-white transition duration-300" data-category="guides">
+                How-To Guides
+            </button>
+            <button onclick="filterContent('tips')" class="category-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium hover:bg-green-600 hover:text-white transition duration-300" data-category="tips">
+                Eco Tips
+            </button>
+            <button onclick="filterContent('research')" class="category-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium hover:bg-green-600 hover:text-white transition duration-300" data-category="research">
+                Research
+            </button>
+            <button onclick="filterContent('stories')" class="category-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium hover:bg-green-600 hover:text-white transition duration-300" data-category="stories">
+                Success Stories
+            </button>
+            <button onclick="filterContent('resources')" class="category-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium hover:bg-green-600 hover:text-white transition duration-300" data-category="resources">
+                Resources
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Article -->
+<section id="blog-content" class="py-16">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Featured Article</h2>
+            <p class="text-lg text-gray-600">Our latest comprehensive guide</p>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+            <article class="bg-white rounded-lg shadow-xl overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Complete Guide to Composting" class="w-full h-64 md:h-80 object-cover">
+                <div class="p-8">
+                    <div class="flex items-center mb-4">
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium mr-3">How-To Guide</span>
+                        <span class="text-gray-500 text-sm">Published on December 20, 2024</span>
+                        <span class="text-gray-500 text-sm ml-4">5 min read</span>
+                    </div>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-4">The Complete Guide to Home Composting: Transform Your Kitchen Waste into Garden Gold</h3>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                        Discover how to create nutrient-rich compost from your kitchen scraps and yard waste. This comprehensive guide covers everything from setting up your compost bin to troubleshooting common problems, helping you reduce waste while enriching your soil naturally.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b75b5dc4?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" alt="Author" class="w-10 h-10 rounded-full object-cover mr-3">
+                            <div>
+                                <p class="font-semibold text-gray-800">Dr. Sarah Johnson</p>
+                                <p class="text-sm text-gray-600">Environmental Scientist</p>
+                            </div>
+                        </div>
+                        <a href="#" onclick="openArticle('composting-guide')" class="inline-flex items-center text-green-600 font-semibold hover:text-green-800 transition duration-300">
+                            Read Full Article <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Grid -->
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Latest Articles & Resources</h2>
+            <p class="text-lg text-gray-600">Explore our collection of environmental guides, tips, and insights</p>
+        </div>
+
+        <div id="blogGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- How-To Guide 1 -->
+            <article class="blog-item guides bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Rainwater Harvesting" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex items-center mb-3">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium mr-2">How-To Guide</span>
+                        <span class="text-gray-500 text-sm">Dec 18, 2024</span>
+                        <span class="text-gray-500 text-sm ml-2">• 7 min read</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">DIY Rainwater Harvesting System for Your Home</h3>
+                    <p class="text-gray-600 mb-4">Learn how to set up an efficient rainwater collection system that can save hundreds of gallons of water annually...</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=30&q=80" alt="Author" class="w-8 h-8 rounded-full object-cover mr-2">
+                            <span class="text-sm text-gray-600">Mike Chen</span>
+                        </div>
+                        <a href="#" onclick="openArticle('rainwater-harvesting')" class="text-green-600 font-semibold hover:text-green-800 transition duration-300">
+                            Read More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Eco Tips 1 -->
+            <article class="blog-item tips bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Plastic-Free Living" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex items-center mb-3">
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium mr-2">Eco Tips</span>
+                        <span class="text-gray-500 text-sm">Dec 15, 2024</span>
+                        <span class="text-gray-500 text-sm ml-2">• 4 min read</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">10 Simple Ways to Reduce Plastic Use in Daily Life</h3>
+                    <p class="text-gray-600 mb-4">Practical tips to eliminate single-use plastics from your routine and make eco-friendly swaps that actually work...</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=30&q=80" alt="Author" class="w-8 h-8 rounded-full object-cover mr-2">
+                            <span class="text-sm text-gray-600">Emma Wilson</span>
+                        </div>
+                        <a href="#" onclick="openArticle('plastic-free')" class="text-green-600 font-semibold hover:text-green-800 transition duration-300">
+                            Read More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Research Article -->
+            <article class="blog-item research bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1569163139394-de4e4f43e4e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Carbon Sequestration" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex items-center mb-3">
+                        <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-medium mr-2">Research</span>
+                        <span class="text-gray-500 text-sm">Dec 12, 2024</span>
+                        <span class="text-gray-500 text-sm ml-2">• 8 min read</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">New Findings: Urban Trees Absorb 25% More Carbon Than Previously Estimated</h3>
+                    <p class="text-gray-600 mb-4">Latest research reveals urban forests are more effective at carbon sequestration, offering new hope for climate action...</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=30&q=80" alt="Author" class="w-8 h-8 rounded-full object-cover mr-2">
+                            <span class="text-sm text-gray-600">Dr. James Park</span>
+                        </div>
+                        <a href="#" onclick="openArticle('carbon-research')" class="text-green-600 font-semibold hover:text-green-800 transition duration-300">
+                            Read More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Success Story -->
+            <article class="blog-item stories bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Community Garden" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex items-center mb-3">
+                        <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-medium mr-2">Success Story</span>
+                        <span class="text-gray-500 text-sm">Dec 10, 2024</span>
+                        <span class="text-gray-500 text-sm ml-2">• 5 min read</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">How One Community Transformed a Vacant Lot into a Thriving Food Forest</h3>
+                    <p class="text-gray-600 mb-4">The inspiring story of Greendale neighborhood's journey from urban blight to sustainable abundance...</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b75b5dc4?ixlib=rb-4.0.3&auto=format&fit=crop&w=30&q=80" alt="Author" class="w-8 h-8 rounded-full object-cover mr-2">
+                            <span class="text-sm text-gray-600">Lisa Martinez</span>
+                        </div>
+                        <a href="#" onclick="openArticle('community-garden')" class="text-green-600 font-semibold hover:text-green-800 transition duration-300">
+                            Read More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Resource Guide -->
+            <article class="blog-item resources bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Solar Guide" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex items-center mb-3">
+                        <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-medium mr-2">Resource</span>
+                        <span class="text-gray-500 text-sm">Dec 8, 2024</span>
+                        <span class="text-gray-500 text-sm ml-2">• 6 min read</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Complete Solar Energy Resource Guide for Homeowners</h3>
+                    <p class="text-gray-600 mb-4">Everything you need to know about residential solar panels, including costs, benefits, and installation tips...</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=30&q=80" alt="Author" class="w-8 h-8 rounded-full object-cover mr-2">
+                            <span class="text-sm text-gray-600">Alex Thompson</span>
+                        </div>
+                        <a href="#" onclick="openArticle('solar-guide')" class="text-green-600 font-semibold hover:text-green-800 transition duration-300">
+                            Read More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Environmental Tips -->
+            <article class="blog-item tips bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1573160813959-df05c19fbc85?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Energy Saving" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex items-center mb-3">
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium mr-2">Eco Tips</span>
+                        <span class="text-gray-500 text-sm">Dec 5, 2024</span>
+                        <span class="text-gray-500 text-sm ml-2">• 3 min read</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Energy-Saving Hacks That Cut Your Bill by 30%</h3>
+                    <p class="text-gray-600 mb-4">Simple adjustments and smart habits that significantly reduce energy consumption without sacrificing comfort...</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=30&q=80" alt="Author" class="w-8 h-8 rounded-full object-cover mr-2">
+                            <span class="text-sm text-gray-600">Maya Patel</span>
+                        </div>
+                        <a href="#" onclick="openArticle('energy-saving')" class="text-green-600 font-semibold hover:text-green-800 transition duration-300">
+                            Read More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center mt-12">
+            <button id="loadMoreBtn" class="bg-green-600 text-white font-bold py-3 px-8 rounded-full hover:bg-green-700 transition duration-300">
+                <i class="fas fa-plus mr-2"></i>Load More Articles
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Resource Downloads -->
+<section class="py-16">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Free Resources & Downloads</h2>
+            <p class="text-lg text-gray-600">Practical guides and tools for environmental conservation</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center transform hover:scale-105 transition duration-300">
+                <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-download text-green-600 text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Home Energy Audit Checklist</h3>
+                <p class="text-gray-600 text-sm mb-4">Comprehensive checklist to assess your home's energy efficiency</p>
+                <button class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition duration-300" onclick="downloadResource('energy-audit')">
+                    Download PDF
+                </button>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center transform hover:scale-105 transition duration-300">
+                <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-seedling text-blue-600 text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Native Plants Guide</h3>
+                <p class="text-gray-600 text-sm mb-4">Regional guide to native plants for sustainable landscaping</p>
+                <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300" onclick="downloadResource('native-plants')">
+                    Download PDF
+                </button>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center transform hover:scale-105 transition duration-300">
+                <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-recycle text-purple-600 text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Zero Waste Starter Kit</h3>
+                <p class="text-gray-600 text-sm mb-4">Step-by-step guide to begin your zero waste journey</p>
+                <button class="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition duration-300" onclick="downloadResource('zero-waste')">
+                    Download PDF
+                </button>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center transform hover:scale-105 transition duration-300">
+                <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-leaf text-yellow-600 text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Composting Quick Reference</h3>
+                <p class="text-gray-600 text-sm mb-4">Easy reference guide for successful home composting</p>
+                <button class="bg-yellow-600 text-white px-4 py-2 rounded-md hover:bg-yellow-700 transition duration-300" onclick="downloadResource('composting')">
+                    Download PDF
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Subscription -->
+<section class="py-16 bg-green-800 text-white">
+    <div class="container mx-auto px-4">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Never Miss Our Latest Content</h2>
+            <p class="text-lg mb-8 text-green-100">Subscribe to our weekly newsletter for the latest environmental tips, guides, and conservation insights</p>
+            
+            <form id="newsletterForm" class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+                <input type="email" id="newsletterEmail" placeholder="Enter your email address" required class="flex-1 px-4 py-3 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-300">
+                <button type="submit" class="bg-white text-green-800 font-bold py-3 px-8 rounded-full hover:bg-green-100 transition duration-300">
+                    Subscribe
+                </button>
+            </form>
+            
+            <p class="text-sm text-green-200 mt-4">Join 5,000+ subscribers • No spam, unsubscribe anytime</p>
+        </div>
+    </div>
+</section>
+
+<!-- Article Modal -->
+<div id="articleModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+    <div class="flex items-center justify-center min-h-screen p-4">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 id="articleTitle" class="text-2xl md:text-3xl font-bold"></h3>
+                    <button onclick="closeArticle()" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                <div id="articleContent" class="prose max-w-none">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4">Jivan-Jyoti Foundation</h3>
+                <p class="text-gray-300">Empowering communities with knowledge and resources for environmental conservation and sustainable living.</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Content Categories</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" onclick="filterContent('guides')" class="text-gray-300 hover:text-white">How-To Guides</a></li>
+                    <li><a href="#" onclick="filterContent('tips')" class="text-gray-300 hover:text-white">Eco Tips</a></li>
+                    <li><a href="#" onclick="filterContent('research')" class="text-gray-300 hover:text-white">Research</a></li>
+                    <li><a href="#" onclick="filterContent('stories')" class="text-gray-300 hover:text-white">Success Stories</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Free Resources</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" onclick="downloadResource('energy-audit')" class="text-gray-300 hover:text-white">Energy Audit Guide</a></li>
+                    <li><a href="#" onclick="downloadResource('native-plants')" class="text-gray-300 hover:text-white">Native Plants Guide</a></li>
+                    <li><a href="#" onclick="downloadResource('zero-waste')" class="text-gray-300 hover:text-white">Zero Waste Kit</a></li>
+                    <li><a href="#" onclick="downloadResource('composting')" class="text-gray-300 hover:text-white">Composting Guide</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Connect With Us</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+            <p class="text-gray-300">&copy; 2024 Jivan-Jyoti Foundation. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/navigation.js"></script>
+<script>
+// Article content data (simplified for demo)
+const blogArticles = {
+    'composting-guide': {
+        title: 'The Complete Guide to Home Composting: Transform Your Kitchen Waste into Garden Gold',
+        content: `
+            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Composting" class="w-full h-64 object-cover rounded-lg mb-6">
+            
+            <div class="flex items-center mb-6">
+                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium mr-3">How-To Guide</span>
+                <span class="text-gray-500">December 20, 2024 • 5 min read</span>
+            </div>
+            
+            <p class="text-lg text-gray-700 mb-6">Composting is one of the most effective ways to reduce household waste while creating nutrient-rich soil for your garden. This comprehensive guide will walk you through everything you need to know to start composting at home.</p>
+            
+            <h4 class="text-xl font-bold mb-4">What is Composting?</h4>
+            <p class="text-gray-700 mb-6">Composting is the natural process of decomposition that transforms organic waste into a dark, crumbly, earth-smelling soil amendment called compost. It's often called "black gold" by gardeners because of its incredible value for plant growth.</p>
+            
+            <h4 class="text-xl font-bold mb-4">Benefits of Home Composting</h4>
+            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
+                <li>Reduces household waste by up to 30%</li>
+                <li>Creates nutrient-rich soil amendment</li>
+                <li>Saves money on fertilizers and soil conditioners</li>
+                <li>Reduces methane emissions from landfills</li>
+                <li>Improves soil structure and water retention</li>
+            </ul>
+            
+            <h4 class="text-xl font-bold mb-4">Getting Started: What You Need</h4>
+            <p class="text-gray-700 mb-4">You don't need expensive equipment to start composting. Here are the basics:</p>
+            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
+                <li>A designated area in your yard (3x3 feet minimum)</li>
+                <li>Brown materials (carbon): dry leaves, newspaper, cardboard</li>
+                <li>Green materials (nitrogen): kitchen scraps, grass clippings</li>
+                <li>A shovel or pitchfork for turning</li>
+                <li>Water source for moisture control</li>
+            </ul>
+            
+            <h4 class="text-xl font-bold mb-4">The Composting Process</h4>
+            <p class="text-gray-700 mb-4">Follow these simple steps:</p>
+            <ol class="list-decimal list-inside space-y-2 mb-6 text-gray-700">
+                <li>Choose your location - partially shaded area with good drainage</li>
+                <li>Start with a layer of brown materials</li>
+                <li>Add green materials in thin layers</li>
+                <li>Maintain a 3:1 ratio of brown to green materials</li>
+                <li>Keep the pile moist but not waterlogged</li>
+                <li>Turn the pile every 2-3 weeks for faster decomposition</li>
+                <li>Harvest finished compost in 3-6 months</li>
+            </ol>
+            
+            <h4 class="text-xl font-bold mb-4">Troubleshooting Common Problems</h4>
+            <p class="text-gray-700 mb-4">Here's how to fix common composting issues:</p>
+            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
+                <li><strong>Bad odor:</strong> Add more brown materials and turn the pile</li>
+                <li><strong>Pile not decomposing:</strong> Add water and green materials</li>
+                <li><strong>Attracting pests:</strong> Avoid meat, dairy, and cover food scraps</li>
+                <li><strong>Too wet:</strong> Add dry brown materials and improve drainage</li>
+            </ul>
+            
+            <p class="text-gray-700">With patience and proper technique, you'll soon have rich, dark compost to enhance your garden while significantly reducing your household waste. Start small and expand your composting system as you gain experience!</p>
+        `
+    },
+    'rainwater-harvesting': {
+        title: 'DIY Rainwater Harvesting System for Your Home',
+        content: `
+            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Rainwater Harvesting" class="w-full h-64 object-cover rounded-lg mb-6">
+            
+            <p class="text-lg text-gray-700 mb-6">Rainwater harvesting is an ancient practice that's gaining renewed importance in our water-conscious world. Learn how to set up your own system to conserve water and reduce your utility bills.</p>
+            
+            <h4 class="text-xl font-bold mb-4">Benefits of Rainwater Harvesting</h4>
+            <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700">
+                <li>Reduces water bills by 30-50%</li>
+                <li>Provides chemical-free water for plants</li>
+                <li>Reduces stormwater runoff</li>
+                <li>Emergency water supply during droughts</li>
+                <li>Simple and cost-effective to implement</li>
+            </ul>
+            
+            <h4 class="text-xl font-bold mb-4">System Components</h4>
+            <p class="text-gray-700 mb-6">A basic rainwater harvesting system includes catchment area (roof), gutters, downspouts, first-flush diverter, storage tank, and distribution system. Most homeowners can install a simple system for under $200.</p>
+            
+            <p class="text-gray-700">Start with a basic barrel system and expand as needed. Even a small 55-gallon barrel can collect significant water during rainy seasons, providing valuable irrigation water for your garden while reducing your environmental footprint.</p>
+        `
+    }
+};
+
+// Category filtering
+function filterContent(category) {
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    categoryBtns.forEach(btn => {
+        btn.classList.remove('bg-green-600', 'text-white');
+        btn.classList.add('bg-gray-200', 'text-gray-700');
+    });
+    
+    const activeBtn = document.querySelector(`[data-category="${category}"]`);
+    activeBtn.classList.remove('bg-gray-200', 'text-gray-700');
+    activeBtn.classList.add('bg-green-600', 'text-white');
+    
+    const blogItems = document.querySelectorAll('.blog-item');
+    
+    blogItems.forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+            item.style.display = 'block';
+            item.style.animation = 'fadeInUp 0.5s ease-out';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+
+// Article modal functions
+function openArticle(articleId) {
+    const modal = document.getElementById('articleModal');
+    const title = document.getElementById('articleTitle');
+    const content = document.getElementById('articleContent');
+    
+    const article = blogArticles[articleId];
+    if (article) {
+        title.textContent = article.title;
+        content.innerHTML = article.content;
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    } else {
+        // Fallback for articles not yet implemented
+        title.textContent = 'Article Coming Soon';
+        content.innerHTML = '<p class="text-gray-700">This article is currently being written. Please check back soon for the full content!</p>';
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeArticle() {
+    const modal = document.getElementById('articleModal');
+    modal.classList.add('hidden');
+    document.body.style.overflow = '';
+}
+
+// Close modal when clicking outside
+document.getElementById('articleModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeArticle();
+    }
+});
+
+// Resource download function
+function downloadResource(resourceType) {
+    // Simulate download
+    const resourceNames = {
+        'energy-audit': 'Home Energy Audit Checklist',
+        'native-plants': 'Native Plants Guide',
+        'zero-waste': 'Zero Waste Starter Kit',
+        'composting': 'Composting Quick Reference'
+    };
+    
+    const resourceName = resourceNames[resourceType] || 'Resource';
+    alert(`Downloading: ${resourceName}\n\nThis would normally trigger a PDF download. The resource will be saved to your Downloads folder.`);
+}
+
+// Newsletter subscription
+document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = document.getElementById('newsletterEmail').value;
+    
+    setTimeout(() => {
+        alert('Thank you for subscribing! You\'ll receive our weekly newsletter with the latest environmental tips and resources.');
+        this.reset();
+    }, 1000);
+});
+
+// Load more functionality
+document.getElementById('loadMoreBtn').addEventListener('click', function() {
+    this.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Loading...';
+    
+    setTimeout(() => {
+        this.innerHTML = '<i class="fas fa-check mr-2"></i>All Articles Loaded';
+        this.disabled = true;
+        this.classList.add('opacity-50', 'cursor-not-allowed');
+    }, 2000);
+});
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+</script>
+
+</body>
+</html>

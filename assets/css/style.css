@@ -1,0 +1,240 @@
+/* Custom CSS for Green Forest Website */
+
+/* Base styles for the body */
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tailwind CSS custom configuration (optional, but good for consistency) */
+/* You would typically configure this in a tailwind.config.js file,
+   but for a single CSS file, we can just rely on the CDN defaults
+   and override with custom classes if necessary. */
+
+/* Custom animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceOnce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.animate-fade-in-down {
+    animation: fadeInDown 1s ease-out forwards;
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.3s;
+    /* Delay for a staggered effect */
+}
+
+.animate-bounce-once {
+    animation: bounceOnce 1.5s ease-in-out 0.6s 1;
+    /* Play once with a delay */
+}
+
+/* Specific styles for elements not easily covered by Tailwind */
+
+/* Example: Custom border for active navigation link (if needed in JS) */
+.nav-link-active {
+    border-bottom: 2px solid theme('colors.green.300');
+    /* Example */
+}
+
+/* Ensure images within content sections are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* General form styling adjustments */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea {
+    transition: all 0.2s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.4);
+    /* Tailwind green-500 with opacity */
+}
+
+/* Custom message box styling (for JS alerts) */
+.message-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    /* rounded-lg */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    /* shadow-xl */
+    z-index: 1000;
+    text-align: center;
+    max-width: 90%;
+    min-width: 300px;
+    border: 1px solid theme('colors.green.300');
+}
+
+.message-box.error {
+    border-color: theme('colors.red.400');
+}
+
+.message-box.success {
+    border-color: theme('colors.green.400');
+}
+
+.message-box h3 {
+    font-size: 1.5rem;
+    /* text-2xl */
+    font-weight: 700;
+    /* font-bold */
+    margin-bottom: 1rem;
+}
+
+.message-box p {
+    font-size: 1.125rem;
+    /* text-lg */
+    color: theme('colors.gray.700');
+    margin-bottom: 1.5rem;
+}
+
+.message-box button {
+    background-color: theme('colors.green.600');
+    color: white;
+    font-weight: 700;
+    /* font-bold */
+    padding: 0.75rem 1.5rem;
+    /* py-3 px-6 */
+    border-radius: 0.375rem;
+    /* rounded-md */
+    transition: background-color 0.3s ease;
+}
+
+.message-box button.error-btn {
+    background-color: theme('colors.red.600');
+}
+
+.message-box button:hover {
+    background-color: theme('colors.green.700');
+}
+
+.message-box button.error-btn:hover {
+    background-color: theme('colors.red.700');
+}
+
+/* Backdrop for message box */
+.message-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+}
+
+/* Mobile Navigation Styles */
+.mobile-menu-hidden {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.mobile-menu-visible {
+    max-height: 500px;
+    overflow: visible;
+    transition: max-height 0.3s ease-in-out;
+}
+
+/* Hamburger menu animation */
+.hamburger-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.hamburger-active .hamburger-line:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-active .hamburger-line:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Mobile navigation link styles */
+.mobile-nav-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.mobile-nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav-link:last-child {
+    border-bottom: none;
+}
+
+/* Ensure mobile menu appears above other content */
+.mobile-menu-container {
+    position: relative;
+    z-index: 50;
+}

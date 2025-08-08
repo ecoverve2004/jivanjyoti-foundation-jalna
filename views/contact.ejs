@@ -1,0 +1,199 @@
+<%- include('partials/header') %>
+
+<!-- Contact Hero Section -->
+<section class="relative bg-cover bg-center h-64 flex items-center justify-center text-white"
+    style="background-image: url('/images/nature.jpg');">
+    <div class="absolute inset-0 bg-black opacity-60"></div>
+    <div class="relative z-10 text-center">
+        <h1 class="text-4xl font-bold">Contact JivanJyoti Foundation</h1>
+        <p class="text-xl mt-2">We'd love to hear from you!</p>
+    </div>
+</section>
+
+<!-- Contact Form and Info Section -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Contact Form -->
+        <div class="bg-green-50 p-8 rounded-lg shadow-xl border border-green-200">
+            <h2 class="text-3xl font-bold text-green-800 mb-6 text-center">Send Us a Message</h2>
+            <form id="contactForm" class="space-y-6">
+                <div>
+                    <label for="contactName" class="block text-lg font-medium text-gray-700 mb-2">Your Name</label>
+                    <input type="text" id="contactName" name="Name" required
+                        class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-lg">
+                    <p id="contactNameError" class="text-red-500 text-sm mt-1 hidden">Please enter your name.</p>
+                </div>
+                <div>
+                    <label for="contactEmail" class="block text-lg font-medium text-gray-700 mb-2">Your Email</label>
+                    <input type="email" id="contactEmail" name="Email" required
+                        class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-lg">
+                    <p id="contactEmailError" class="text-red-500 text-sm mt-1 hidden">Please enter a valid email
+                        address.</p>
+                </div>
+                <div>
+                    <label for="contactSubject" class="block text-lg font-medium text-gray-700 mb-2">Subject</label>
+                    <input type="text" id="contactSubject" name="Subject" required
+                        class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-lg">
+                    <p id="contactSubjectError" class="text-red-500 text-sm mt-1 hidden">Please enter a subject.</p>
+                </div>
+                <div>
+                    <label for="contactMessage" class="block text-lg font-medium text-gray-700 mb-2">Message</label>
+                    <textarea id="contactMessage" name="msg" rows="5" required
+                        class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-lg"></textarea>
+                    <p id="contactMessageError" class="text-red-500 text-sm mt-1 hidden">Please enter your message.</p>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-md text-xl transition duration-300 transform hover:scale-105 shadow-lg">
+                    Send Message <i class="fas fa-paper-plane ml-2"></i>
+                </button>
+                <div id="contactSuccessMessage"
+                    class="hidden mt-4 p-4 bg-green-100 text-green-800 rounded-md border border-green-300 text-center">
+                    Your message has been sent successfully! We will get back to you soon.
+                </div>
+                <div id="contactErrorMessage"
+                    class="hidden mt-4 p-4 bg-red-100 text-red-800 rounded-md border border-red-300 text-center">
+                    There was an error sending your message. Please try again later.
+                </div>
+            </form>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="space-y-8">
+            <div>
+                <h2 class="text-3xl font-bold text-green-800 mb-6">Get in Touch</h2>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    We're here to answer your questions, discuss partnerships, or learn about how you can get involved in our mission to protect our environment.
+                </p>
+            </div>
+
+            <!-- Contact Details -->
+            <div class="space-y-6">
+                <div class="flex items-start space-x-4">
+                    <div class="bg-green-100 p-3 rounded-full">
+                        <i class="fas fa-map-marker-alt text-green-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Our Address</h3>
+                        <p class="text-gray-600">
+                            <%= config.contact.address %><br>
+                            Environmental Conservation Center<br>
+                            Maharashtra, India
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <div class="bg-green-100 p-3 rounded-full">
+                        <i class="fas fa-phone text-green-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Phone Number</h3>
+                        <p class="text-gray-600"><%= config.contact.phone %></p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <div class="bg-green-100 p-3 rounded-full">
+                        <i class="fas fa-envelope text-green-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Email Address</h3>
+                        <p class="text-gray-600"><%= config.contact.email %></p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <div class="bg-green-100 p-3 rounded-full">
+                        <i class="fas fa-clock text-green-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Office Hours</h3>
+                        <p class="text-gray-600">
+                            Monday - Friday: 9:00 AM - 6:00 PM<br>
+                            Saturday: 9:00 AM - 2:00 PM<br>
+                            Sunday: Closed
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media -->
+            <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Follow Us</h3>
+                <div class="flex space-x-4">
+                    <a href="<%= config.social.facebook %>" class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition duration-300">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="<%= config.social.twitter %>" class="bg-blue-400 text-white p-3 rounded-full hover:bg-blue-500 transition duration-300">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="<%= config.social.instagram %>" class="bg-pink-600 text-white p-3 rounded-full hover:bg-pink-700 transition duration-300">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="<%= config.social.linkedin %>" class="bg-blue-800 text-white p-3 rounded-full hover:bg-blue-900 transition duration-300">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section (Optional - can be implemented later) -->
+<section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold text-green-800 mb-8">Find Us</h2>
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <!-- Placeholder for map integration -->
+            <div class="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
+                <div class="text-center">
+                    <i class="fas fa-map text-6xl text-gray-400 mb-4"></i>
+                    <p class="text-gray-600">Interactive map coming soon</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+// Contact form handler
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    const successMessage = document.getElementById('contactSuccessMessage');
+    const errorMessage = document.getElementById('contactErrorMessage');
+
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(contactForm);
+        const data = Object.fromEntries(formData);
+        
+        try {
+            const response = await fetch('/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                successMessage.classList.remove('hidden');
+                errorMessage.classList.add('hidden');
+                contactForm.reset();
+            } else {
+                throw new Error(result.message);
+            }
+        } catch (error) {
+            errorMessage.textContent = error.message || 'There was an error sending your message. Please try again later.';
+            errorMessage.classList.remove('hidden');
+            successMessage.classList.add('hidden');
+        }
+    });
+});
+</script>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,77 @@
+<%- include('partials/header') %>
+
+<!-- Team Hero Section -->
+<section class="relative bg-cover bg-center h-64 flex items-center justify-center text-white"
+    style="background-image: url('/images/bg.jpg');">
+    <div class="absolute inset-0 bg-black opacity-60"></div>
+    <div class="relative z-10 text-center">
+        <h1 class="text-5xl font-bold">Meet Our Dedicated Team</h1>
+        <p class="text-xl mt-2">The passionate individuals driving our mission forward.</p>
+    </div>
+</section>
+
+<!-- Team Members Section -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold text-green-800 mb-12">Our Leaders & Experts</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+            <% teamMembers.forEach(function(member) { %>
+            <!-- Team Member -->
+            <div class="bg-green-50 rounded-lg shadow-md p-6 flex flex-col items-center transform hover:scale-105 transition duration-300">
+                <img src="<%= member.image %>" alt="<%= member.name %>"
+                    class="w-36 h-36 rounded-full object-cover mb-4 border-4 border-green-300">
+                <h3 class="text-2xl font-semibold text-green-800 mb-2"><%= member.name %></h3>
+                <p class="text-green-600 font-medium mb-3"><%= member.position %></p>
+                <p class="text-gray-700 text-center text-sm"><%= member.description %></p>
+                <div class="flex space-x-3 mt-4">
+                    <a href="#" class="text-gray-500 hover:text-blue-600 transition duration-300">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-blue-400 transition duration-300">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-blue-400 transition duration-300">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-blue-400 transition duration-300">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+    </div>
+</section>
+
+<!-- Join Our Team Section -->
+<section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold text-green-800 mb-8">Join Our Mission</h2>
+        <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+            We're always looking for passionate individuals who share our commitment to environmental conservation. 
+            Whether you're a researcher, educator, or simply someone who cares about our planet, there's a place for you on our team.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div class="p-6 bg-white rounded-lg shadow-md">
+                <i class="fas fa-users text-4xl text-green-600 mb-4"></i>
+                <h3 class="text-xl font-semibold text-green-800 mb-3">Volunteers</h3>
+                <p class="text-gray-600">Join our volunteer program and make a direct impact in your community.</p>
+            </div>
+            <div class="p-6 bg-white rounded-lg shadow-md">
+                <i class="fas fa-briefcase text-4xl text-green-600 mb-4"></i>
+                <h3 class="text-xl font-semibold text-green-800 mb-3">Career Opportunities</h3>
+                <p class="text-gray-600">Explore full-time and part-time positions within our organization.</p>
+            </div>
+            <div class="p-6 bg-white rounded-lg shadow-md">
+                <i class="fas fa-handshake text-4xl text-green-600 mb-4"></i>
+                <h3 class="text-xl font-semibold text-green-800 mb-3">Partnerships</h3>
+                <p class="text-gray-600">Collaborate with us as an institutional or corporate partner.</p>
+            </div>
+        </div>
+        <a href="/contact" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105">
+            Get Involved <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+    </div>
+</section>
+
+<%- include('partials/footer') %>

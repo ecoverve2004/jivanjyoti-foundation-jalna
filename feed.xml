@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JivanJyoti Foundation - News &amp; Updates</title>
+    <description>Latest news, updates, and insights from JivanJyoti Foundation on environmental conservation, tree plantation, and sustainable development.</description>
+    <link>https://jivanjyoti-foundation-jalna.netlify.app/</link>
+    <atom:link href="https://jivanjyoti-foundation-jalna.netlify.app/feed.xml" rel="self" type="application/rss+xml"/>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 04 Jan 2025 12:00:00 +0000</lastBuildDate>
+    <pubDate>Sat, 04 Jan 2025 12:00:00 +0000</pubDate>
+    <ttl>1440</ttl>
+    <managingEditor>info@jivanjyotifoundation.org (JivanJyoti Foundation)</managingEditor>
+    <webMaster>info@jivanjyotifoundation.org (JivanJyoti Foundation)</webMaster>
+    <copyright>Copyright 2025 JivanJyoti Foundation. All rights reserved.</copyright>
+    <category>Environment</category>
+    <category>Conservation</category>
+    <category>Tree Plantation</category>
+    <category>Sustainability</category>
+    
+    <item>
+      <title>Record-Breaking Tree Planting Event!</title>
+      <description>Our recent community tree planting event saw over 5,000 saplings planted in a single day, a new record for JivanJyoti Foundation!</description>
+      <link>https://jivanjyoti-foundation-jalna.netlify.app/news.html</link>
+      <guid>https://jivanjyoti-foundation-jalna.netlify.app/news.html#tree-planting-2025</guid>
+      <pubDate>Sat, 04 Jan 2025 10:00:00 +0000</pubDate>
+      <category>Tree Plantation</category>
+      <category>Community</category>
+    </item>
+    
+    <item>
+      <title>New Conservation Area Established</title>
+      <description>We are thrilled to announce the successful establishment of a new protected area, safeguarding critical ecosystems and biodiversity.</description>
+      <link>https://jivanjyoti-foundation-jalna.netlify.app/news.html</link>
+      <guid>https://jivanjyoti-foundation-jalna.netlify.app/news.html#conservation-area-2025</guid>
+      <pubDate>Wed, 01 Jan 2025 08:00:00 +0000</pubDate>
+      <category>Conservation</category>
+      <category>Environment</category>
+    </item>
+    
+    <item>
+      <title>Youth Environmental Summit Highlights</title>
+      <description>Inspiring young leaders gathered for our annual summit, sharing innovative ideas for a sustainable future and environmental protection.</description>
+      <link>https://jivanjyoti-foundation-jalna.netlify.app/news.html</link>
+      <guid>https://jivanjyoti-foundation-jalna.netlify.app/news.html#youth-summit-2024</guid>
+      <pubDate>Mon, 30 Dec 2024 12:00:00 +0000</pubDate>
+      <category>Education</category>
+      <category>Youth</category>
+    </item>
+    
+    <item>
+      <title>Volunteer Spotlight: Community Heroes</title>
+      <description>Learn about our most dedicated volunteers and their incredible contributions to environmental conservation and community development.</description>
+      <link>https://jivanjyoti-foundation-jalna.netlify.app/team.html</link>
+      <guid>https://jivanjyoti-foundation-jalna.netlify.app/team.html#volunteer-spotlight</guid>
+      <pubDate>Fri, 27 Dec 2024 14:00:00 +0000</pubDate>
+      <category>Volunteers</category>
+      <category>Community</category>
+    </item>
+    
+    <item>
+      <title>New Research on Forest Carbon Sequestration</title>
+      <description>Our latest scientific findings highlight the crucial role of healthy forests in absorbing atmospheric carbon and fighting climate change.</description>
+      <link>https://jivanjyoti-foundation-jalna.netlify.app/blog.html</link>
+      <guid>https://jivanjyoti-foundation-jalna.netlify.app/blog.html#carbon-research</guid>
+      <pubDate>Tue, 24 Dec 2024 09:00:00 +0000</pubDate>
+      <category>Research</category>
+      <category>Climate Change</category>
+    </item>
+    
+  </channel>
+</rss>

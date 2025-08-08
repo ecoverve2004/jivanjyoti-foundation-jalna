@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="yuB84mu_L05PDvJ5M36dWrDtpUPWU6kCI5Nd-nI4A4M" />
+    <title><%= pageTitle || 'JivanJyoti Foundation - Save Our Nature' %></title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="font-inter bg-gray-50 text-gray-800">
+<!-- Header Section -->
+<header class="bg-green-800 text-white shadow-lg">
+    <nav class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+            <!-- Logo -->
+            <a href="/"
+                class="text-2xl md:text-3xl font-bold text-green-200 hover:text-green-100 transition duration-300 rounded-md p-2">
+                Jivan-Jyoti Foundation
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex">
+                <ul class="flex space-x-6 text-lg">
+                    <li><a href="/"
+                            class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700 <%= currentPage === '/' ? 'bg-green-700' : '' %>">Home</a>
+                    </li>
+                    <li><a href="/about"
+                            class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700 <%= currentPage === '/about' ? 'bg-green-700' : '' %>">About</a>
+                    </li>
+                    <li><a href="/team"
+                            class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700 <%= currentPage === '/team' ? 'bg-green-700' : '' %>">Team</a>
+                    </li>
+                    <li><a href="/projects"
+                            class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700 <%= currentPage === '/projects' ? 'bg-green-700' : '' %>">Projects</a>
+                    </li>
+                    <li><a href="/news"
+                            class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700 <%= currentPage === '/news' ? 'bg-green-700' : '' %>">News</a>
+                    </li>
+                    <li><a href="/donate"
+                            class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700 <%= currentPage === '/donate' ? 'bg-green-700' : '' %>">Donate</a>
+                    </li>
+                    <li><a href="/contact"
+                            class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700 <%= currentPage === '/contact' ? 'bg-green-700' : '' %>">Contact</a>
+                    </li>
+                    <li><a href="/login"
+                            class="hover:text-green-300 transition duration-300 p-2 rounded-md hover:bg-green-700 <%= currentPage === '/login' ? 'bg-green-700' : '' %>">Login</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="hamburgerBtn" class="md:hidden focus:outline-none focus:ring-2 focus:ring-green-300 p-2 rounded-md">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="mobile-menu-hidden md:hidden bg-green-800 mt-4 mobile-menu-container">
+            <div class="py-2">
+                <a href="/" class="mobile-nav-link <%= currentPage === '/' ? 'bg-green-700' : '' %>">
+                    <i class="fas fa-home mr-2"></i>Home
+                </a>
+                <a href="/about" class="mobile-nav-link <%= currentPage === '/about' ? 'bg-green-700' : '' %>">
+                    <i class="fas fa-info-circle mr-2"></i>About
+                </a>
+                <a href="/team" class="mobile-nav-link <%= currentPage === '/team' ? 'bg-green-700' : '' %>">
+                    <i class="fas fa-users mr-2"></i>Team
+                </a>
+                <a href="/projects" class="mobile-nav-link <%= currentPage === '/projects' ? 'bg-green-700' : '' %>">
+                    <i class="fas fa-project-diagram mr-2"></i>Projects
+                </a>
+                <a href="/news" class="mobile-nav-link <%= currentPage === '/news' ? 'bg-green-700' : '' %>">
+                    <i class="fas fa-newspaper mr-2"></i>News
+                </a>
+                <a href="/donate" class="mobile-nav-link <%= currentPage === '/donate' ? 'bg-green-700' : '' %>">
+                    <i class="fas fa-heart mr-2"></i>Donate
+                </a>
+                <a href="/contact" class="mobile-nav-link <%= currentPage === '/contact' ? 'bg-green-700' : '' %>">
+                    <i class="fas fa-envelope mr-2"></i>Contact
+                </a>
+                <a href="/login" class="mobile-nav-link <%= currentPage === '/login' ? 'bg-green-700' : '' %>">
+                    <i class="fas fa-sign-in-alt mr-2"></i>Login
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenuOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden"></div>
+</header>
